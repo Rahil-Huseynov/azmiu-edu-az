@@ -1,10 +1,22 @@
-// Font Sizes
-$font-size-small: 10px;
-$font-size-medium: 16px;
-$font-size-custom:20px;
-$font-size-large: 24px;
-$font-size-xlarge: 36px;
 
+
+
+// Font Sizes
+// $font-size-small: 10px;
+// $font-size-medium: 16px;
+// $font-size-custom:20px;
+// $font-size-large: 24px;
+// $font-size-xlarge: 36px;
+$font-size-xsmall:10px;
+$font-size-small:12px;
+$font-size-medium: 15px;
+$font-size-large: 25px;
+$font-size-xlarge: 30px;
+$font-size-custom:20px;
+
+// padding
+$padding: 60px 0;
+$res-padding:60px 20px;
 // Font Weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
@@ -21,6 +33,10 @@ $color-hover:#155783;
 $color-orange:#f1aa61;
 $color-second-background:#eeeeee;
 
+// FONT-FAMILY
+$base-font: sans-serif;
+
+
 // Spacing
 $spacing-small: 8px;
 $spacing-medium: 16px;
@@ -34,6 +50,8 @@ $border-radius-large: 16px;
 
 
 // Media Queries
+
+$breakpoint-xsmall: 460px;
 $breakpoint-small: 576px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 992px;

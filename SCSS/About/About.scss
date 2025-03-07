@@ -1,0 +1,428 @@
+@use '../variables' as *;
+@use '../map' as *;
+@use '../mixin' as *;
+@use '../global.scss';
+
+
+.about-section {
+    background-color: $color-second-background;
+    width: 100%;
+    padding: $padding;
+    @media (max-width:1200px){
+        padding: $res-padding;
+    }
+    .container {
+        max-width: 1080px !important;
+        .about-block {
+            width: 100%;
+            @include makeFlexForColum(20px);
+            .liner {
+                width: 100%;
+                height: 2px;
+                background-color: $color-orange;
+            }
+            .title {
+                font-size: 30px;
+                font-family: $base-font;
+                font-weight: 300;
+                text-transform: capitalize;
+                color: black;
+            }
+       
+            .road {
+                @include makeFlexForColum;
+                height: 100%;
+                .breadcrumb {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: auto;
+                    text-align: center;
+                    width: 100%;
+                    z-index: 1;
+                    .breadcrumb__item {
+                        transform: skew(-8deg);
+                        background-color: #ffffff;
+                        color: #252525;
+                        font-family: $base-font;
+                        border-radius: 3px;
+                        transition: all 0.3s ease;
+                        text-transform: uppercase;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 10px;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+                        margin: 1px;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        &:hover {
+                            background: $color-background;
+                            color: #fff;
+                        }
+                        .breadcrumb__inner {
+                            transform: skew(8deg);  
+                            @include makeFlexForColum;
+                            margin: auto;
+                            z-index: 2;
+                            .breadcrumb__title {
+                                font-size: $font-size-xsmall;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+            .about-bottom {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                @media (max-width: $breakpoint-medium) {
+                    flex-direction: column;
+                }
+                .information {
+                    width: 100%;
+                    @include makeFlexForColum(30px);
+                    font-size: $font-size-medium;
+                    font-family: $base-font;
+                    padding: 20px;
+                    border-radius: 10px;
+                    background-color: white;
+                    .info-link {
+                        width: 100%;
+                        @include makeFlexForColum;
+                        a {
+                            padding: 5px;
+                            border: 1px solid $color-second-background;
+                            background-color: #ddd;
+                            width: 100%;
+                            color: $color-background;
+                            font-family: $base-font;
+                            p {
+                                color: $color-background;
+                            }
+                            &:hover {
+                                p {
+                                    transition: 0.3s;
+                                    transform: translateX(10px);
+                                }
+                            }
+                        }
+                    }
+                    .leadership {
+                        @include makeFlexForColum(50px);
+                        align-items: center;
+                        > div:first-of-type {
+                            @include flex-center;
+                            img {
+                                border: 2px solid $color-background;
+                                padding: 3px;
+                                width: 230px;
+                                height: 230px;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                        > div:nth-of-type(n + 2) {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            flex-direction: row;
+                            gap: 20px;
+                            justify-content: center;
+                            @media (max-width: $breakpoint-large) {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                            @media (max-width: $breakpoint-xsmall) {
+                                grid-template-columns: repeat(1, 1fr);
+                            }
+                            img {
+                                border: 2px solid $color-background;
+                                padding: 3px;
+                                width: 150px;
+                                height: 150px;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                        div {
+                            @include makeFlexForColum(10px);
+                            @include flex-center;
+                            a {
+                                &:hover {
+                                    text-decoration: underline;
+                                    text-decoration-color: $color-background;
+                                }
+                                > p:first-of-type {
+                                    font-weight: bold;
+                                    text-transform: capitalize;
+                                    font-size: 18px;
+                                    color: $color-background;
+                                    text-align: center;
+                                }
+                                > p:nth-of-type(n + 2) {
+                                    text-transform: capitalize;
+                                    font-weight: lighter;
+                                    font-size: $font-size-medium;
+                                    color: $color-background;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .rating {
+                        @include makeFlexForColum(15px);
+                        div {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            gap: 10px;
+                            @media (max-width: $breakpoint-xsmall) {
+                                flex-direction: column;
+                                gap: 5px;
+                            }
+                            img {
+                                height: 60px;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    height: 45px;
+                                }
+                            }
+                            p {
+                                font-size: 15px;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    text-align: center;
+                                    font-size: $font-size-small;
+                                }
+                            }
+                        }
+                    }
+                    .history {
+                        @include makeFlexForColum(15px);
+                        width: 100%;
+                        div {
+                            @include makeFlexForColum(10px);
+                            h4 {
+                                text-transform: capitalize;
+                                font-size: 18px;
+                                font-weight: bold;
+                                font-family: $base-font;
+                                padding: 5px;
+                                border-bottom: 5px solid rgb(159, 155, 155);
+                                background-color: #ddd;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-medium;
+                                }
+                            }
+                            p {
+                                color: $color-background;
+                                font-weight: 300;
+                                font-family: $base-font;
+                                font-size: $font-size-medium;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-small;
+                                }
+                            }
+                            ul {
+                                @include makeFlexForColum(10px);
+                                li {
+                                    font-size: $font-size-medium;
+                                    font-weight: 300;
+                                    list-style: disc;
+                                    margin-left: 14px;
+                                    color: $color-background;
+                                    @media (max-width: $breakpoint-xsmall) {
+                                        font-size: $font-size-small;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .journal {
+                        @include makeFlexForColum(20px);
+                        align-items: center;
+                        img {
+                            place-items: center;
+                            height: 250px;
+                            border: 2px solid $color-background;
+                            padding: 5px;
+                        }
+                        > div:first-of-type {
+                            display: flex;
+                            flex-direction: column !important;
+                            gap: 5px;
+                            width: 100%;
+                            div {
+                                display: flex;
+                                align-items: center;
+                                > span:first-of-type {
+                                    text-transform: capitalize;
+                                    font-weight: bold;
+                                    font-size: $font-size-medium;
+                                    @media (max-width: $breakpoint-xsmall) {
+                                        font-size: $font-size-small;
+                                    }
+                                    a {
+                                        font-weight: 300;
+                                        color: $color-background;
+                                        &:hover {
+                                            text-decoration: underline;
+                                            -moz-text-decoration-color:$color-background;
+                                        }
+                                    }
+                                }
+                                > span:nth-of-type(n + 2) {
+                                    font-weight: 300;
+                                    font-size: $font-size-medium;
+                                    @media (max-width: $breakpoint-xsmall) {
+                                        font-size: $font-size-small;
+                                    }
+                                }
+                            }
+                        }
+                        > div:nth-of-type(n + 2) {
+                            @include makeFlexForColum(10px);
+                            align-items: center;
+                            h4 {
+                                text-align: center;
+                                font-style: italic;
+                                font-weight: bold;
+                                font-size: 18px;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-medium;
+                                }
+                            }
+                            p {
+                                font-size: $font-size-medium;
+                                font-weight: 300;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-small;
+                                }
+                            }
+
+                            span {
+                                font-style: italic;
+                                font-weight: bold;
+                                width: 100%;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-small;
+                                }
+                                a {
+                                    font-weight: 300;
+                                    color: $color-background;
+                                    font-style: normal;
+                                    &:hover {
+                                        text-decoration: underline;
+                                        -moz-text-decoration-color: $color-background;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    table {
+                        width: 70%;
+                        border-collapse: collapse;
+                        text-align: center;
+                        th,
+                        td {
+                            font-size: $font-size-medium;
+                            border: 1px solid black;
+                            padding: 8px;
+                            @media (max-width: $breakpoint-xsmall) {
+                                font-size: $font-size-small;
+                            }
+                        }
+                        th {
+                            background-color: #f2f2f2;
+                        }
+                    }
+                }
+                .menu {
+                    font-family: $base-font;
+                    position: sticky;
+                    top: 50px;
+                    height: 100%;
+                    background-color:$color-background;
+                    border-radius: 10px;
+                    overflow: hidden;
+
+                    .menu-header {
+                        background-color: $color-background;
+                        color: #ff9900;
+                        font-weight: bold;
+                        padding: $font-size-medium;
+                        text-align: left;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+
+                        > li:hover {
+                            color: $color-orange;
+                        }
+                    }
+
+                    li {
+                        padding: 12px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                        color: white;
+                        cursor: pointer;
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: $font-size-medium;
+                        }
+                    }
+
+                    li:not(.submenu)::before {
+                        content: "• ";
+                    }
+
+                    .submenu {
+                        position: relative;
+                        font-family: $base-font;
+
+                        &::before {
+                            content: "› ";
+                            font-weight: bold;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .submenu-container {
+                            max-height: 0;
+                            overflow: hidden;
+                            opacity: 0;
+                            transition:
+                                max-height 0.4s ease-out,
+                                opacity 0.4s ease-out;
+                            border-radius: 5px;
+                            padding-left: 10px;
+                            padding-top: 0;
+                            display: flex;
+                            flex-direction: column;
+                            height: auto;
+
+                            li {
+                                font-size: $font-size-small;
+                                padding: 5px 0 5px 10px;
+                                border-top: none;
+                            }
+                        }
+
+                        &.active {
+                            &::before {
+                                transform: rotate(90deg);
+                            }
+
+                            .submenu-container {
+                                opacity: 1;
+                                max-height: var(--dynamic-height);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+
