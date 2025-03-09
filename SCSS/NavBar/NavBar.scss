@@ -1,0 +1,152 @@
+a {
+  color: initial;
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0c4384;
+  padding: 0 20px;
+  #navbar__wrapper {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+  }
+  &__dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    height: 0;
+    transform: translateY(-10px);
+  }
+  &__submenu-item_head {
+    line-height: 3;
+    font-size: 15px;
+    width: 250px;
+    color: rgb(245, 168, 66);
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  &__dropdown-active {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: sans-serif;
+    position: absolute;
+    left: 0;
+    transform: translateY(0);
+    background-color: #0c4384;
+  }
+
+  &__submenu-item_down {
+    &:hover,
+    :active {
+      transition: 0.4s;
+      transform: translateX(10px);
+    }
+    line-height: 1.5;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    padding-left: 5px;
+    &-white {
+      color: white;
+      &:hover,
+      :active {
+        color: rgb(165, 166, 178);
+      }
+    }
+  }
+  &__submenu-item_down_container {
+    display: grid;
+    gap: 10px;
+  }
+  &__arrow-icon {
+    transition: transform 0.3s ease;
+    &::before {
+      margin: 0 10px;
+    }
+  }
+
+  &__line {
+    display: inline-block;
+    height: 50px;
+    width: 2px;
+    background-color: rgb(30, 81, 141);
+  }
+  &__menu-item_header_item {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    cursor: pointer;
+    &-color {
+      color: white;
+    }
+  }
+  &__search-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__search_icon {
+    margin-left: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+.fa-solid::before {
+  color: white;
+}
+@keyframes open {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+/* Dropdown default style */
+.navbar__dropdown {
+  opacity: 0; /* Dropdown is hidden by default */
+  transform: translateY(-50px); /* Position it above */
+  visibility: hidden; /* Prevents layout shift when closed */
+  transition: visibility 0s 0.3s, opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* When dropdown is active, show and animate it */
+.navbar__dropdown-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 100%;
+  animation: open 0.3s forwards; /* Open animation */
+}
+
+/* When dropdown is closing, animate it */
+.navbar__dropdown-closing {
+  animation: close 0.3s forwards; /* Close animation */
+  visibility: hidden;
+  opacity: 0;
+}
