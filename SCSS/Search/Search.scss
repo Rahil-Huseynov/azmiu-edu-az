@@ -1,0 +1,136 @@
+@use '../variables' as *;
+@use '../map' as *;
+@use '../mixin' as *;
+@use '../global.scss';
+
+.search-section {
+    width: 100%;
+    padding: $padding;
+    @include flex-center;
+    background-color: $color-second-background;
+    @media (max-width: $breakpoint-xlarge) {
+        padding: $res-padding;
+    }
+    .container {
+        .search-block {
+            @include makeFlexForColum(30px);
+            .search {
+                font-family: $base-font;
+                .find-title {
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    font-size: $font-size-custom;
+                    font-weight: $font-weight-light;
+                }
+                .find {
+                    color:$color-background;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: $font-size-custom;
+                }
+            }
+            .result {
+                width: 100%;
+                font-family: $base-font;
+                @include makeFlexForColum(20px);
+                height: auto;
+                padding: 30px;
+                border-radius: 10px;
+                @media (max-width: $breakpoint-large) {
+                    padding: 10px;
+                }
+                .result-block {
+                    width: 100%;
+                    text-align: left;
+                    @include makeFlexForColum(5px);
+                    background: white;
+                    border-radius: 10px;
+                    padding: 10px 10px 10px 0;
+                    padding-left: 40px;  
+                    box-shadow:
+                      0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+                      0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+                    counter-increment: gradient-counter;
+                    position: relative;
+                    &::before,
+                    &::after {
+                      background-color: $color-background;
+                      border-radius: 1rem 1rem 0 1rem;
+                      content: "";
+                      height: 2.6rem;
+                      left: -1rem;
+                      overflow: hidden;
+                      position: absolute;
+                      top: -1rem;
+                      width: 2.6rem;
+                    }
+                    &::before {
+                      box-shadow:
+                        0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+                        0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+                      align-items: center;
+                      justify-content: center;
+                      content: attr(data-number);;
+                      color: white;
+                      display: flex;
+                      font: 300 15px/1 $base-font;
+                      z-index: 1;
+                    }
+                    a {
+                      font-size: $font-size-custom;
+                      font-weight: $font-weight-light;
+                      color: white;
+                      &:hover {
+                        .title-link {
+                          transform: translateX(10px);
+                        }
+                      }
+                      .title-link {
+                        color: $color-background;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        transition: transform 0.2s ease-in-out;
+                        @media (max-width: $breakpoint-large) {
+                          font-size: $font-size-custom;
+                        }
+                        @media (max-width: $breakpoint-medium) {
+                          font-size: 18px;
+                        }
+                        @media (max-width: $breakpoint-small) {
+                          font-size: 15px;
+                        }
+                      }
+                    }
+                    .info {
+                      font-size: $font-size-medium;
+                      font-weight: $font-weight-light;
+                      font-weight: lighter;
+                      display: -webkit-box;
+                      display: box; 
+                      -webkit-line-clamp: 2;
+                      line-clamp: 2; 
+                      -webkit-box-orient: vertical;
+                      box-orient: vertical; 
+                      overflow: hidden;
+                      @media (max-width: $breakpoint-medium) {
+                        font-size: $font-size-small;
+                      }
+                      @media (max-width: $breakpoint-small) {
+                        -webkit-line-clamp: 3;
+                      line-clamp: 3; 
+                      }
+                    }
+                    .date {
+                      color: $color-text;
+                      font-size: $font-size-small;
+                      @media (max-width: $breakpoint-medium) {
+                        font-size: $font-size-xsmall;
+                      }
+                    }
+                  }
+            }
+
+        }
+    }
+}

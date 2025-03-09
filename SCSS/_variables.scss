@@ -1,10 +1,18 @@
 // Font Sizes
-$font-size-small: 10px;
-$font-size-medium: 16px;
+$font-size-xsmall:10px;
+$font-size-small:12px;
+$font-size-medium: 15px;
+$font-size-large: 25px;
+$font-size-xlarge: 35px;
 $font-size-custom:20px;
-$font-size-large: 24px;
-$font-size-xlarge: 36px;
 
+
+//padding
+$padding:60px 0;
+$res-padding:60px 20px;
+
+// FONT-FAMILY
+$base-font: sans-serif;
 // Font Weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
