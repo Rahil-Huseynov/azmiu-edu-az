@@ -1,6 +1,7 @@
 @use '../variables' as *;
 @use '../map' as *;
 @use '../mixin' as *;
+// !TODO DELETE global.scss
 @use '../global.scss';
 
 .section-pagination {

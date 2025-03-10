@@ -2,9 +2,12 @@
 @use '../map' as *;
 @use '../mixin' as *;
 @use '../global.scss';
+// !TODO DELETE global.scss
+
 
 .search-section {
     width: 100%;
+  // Use new PADDING VARIABLE NAME
     padding: $padding;
     @include flex-center;
     background-color: $color-second-background;
@@ -15,8 +18,10 @@
         .search-block {
             @include makeFlexForColum(30px);
             .search {
+              // Chamge font-family to the global font-family and delete from here
                 font-family: $base-font;
                 .find-title {
+                  // TODO DELETE ONE OF THE FONT WEIGHT
                     font-weight: bold;
                     text-transform: capitalize;
                     font-size: $font-size-custom;
@@ -31,10 +36,14 @@
             }
             .result {
                 width: 100%;
-                font-family: $base-font;
+              // Chamge font-family to the global font-family and delete from here
+              font-family: $base-font;
                 @include makeFlexForColum(20px);
                 height: auto;
+
+              // Use Padding px from padding variable
                 padding: 30px;
+              // Use border-radius from border-radius variable
                 border-radius: 10px;
                 @media (max-width: $breakpoint-large) {
                     padding: 10px;
@@ -43,15 +52,24 @@
                     width: 100%;
                     text-align: left;
                     @include makeFlexForColum(5px);
+                  // Use backgrorund from backgrorund variable
                     background: white;
+
+                  // Use border-radius from border-radius variable
                     border-radius: 10px;
+
+                  // Use all padding in one line  delete padding left property
                     padding: 10px 10px 10px 0;
-                    padding-left: 40px;  
+                    padding-left: 40px;
+
+                  // Use px for adding box shadow
                     box-shadow:
                       0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
                       0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
                     counter-increment: gradient-counter;
                     position: relative;
+
+                  // Use px instead of rem
                     &::before,
                     &::after {
                       background-color: $color-background;
@@ -103,6 +121,10 @@
                       }
                     }
                     .info {
+                      // Delete on of the font-weight
+                      // Use correct display property
+                      // Refactor text turncating (line-clamp)
+
                       font-size: $font-size-medium;
                       font-weight: $font-weight-light;
                       font-weight: lighter;
