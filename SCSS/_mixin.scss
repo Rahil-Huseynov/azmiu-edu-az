@@ -6,6 +6,13 @@
   border-radius: $radius;
 }
 
+@mixin text-turnicate($line-clamp) {
+    -webkit-line-clamp: $line-clamp;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @mixin box-shadow($x, $y, $blur, $color) {
   -webkit-box-shadow: $x $y $blur $color;
   -moz-box-shadow: $x $y $blur $color;

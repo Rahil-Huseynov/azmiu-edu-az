@@ -1,0 +1,126 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
+.search-section {
+  width: 100%;
+  padding: $section-padding;
+  @include flex-center;
+  background-color: $color-second-background;
+  @media (max-width: $breakpoint-xlarge) {
+    padding: $responsive-padding;
+  }
+  .container {
+    .search-block {
+      @include makeFlexForColum(30px);
+      .search {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 3px;
+        .find-title {
+          text-transform: capitalize;
+          font-size: $font-size-custom;
+          font-weight: $font-weight-light;
+        }
+        .find {
+          color: $color-background;
+          font-weight: bold;
+          font-style: italic;
+          font-size: $font-size-custom;
+        }
+      }
+      .result {
+        width: 100%;
+        @include makeFlexForColum(20px);
+        height: auto;
+        padding: $padding-large;
+        border-radius: $border-radius-xsmall;
+        @media (max-width: $breakpoint-large) {
+          padding: $padding-xsmall;
+        }
+        .result-block {
+          width: 100%;
+          text-align: left;
+          @include makeFlexForColum(5px);
+          background: $color-white;
+          border-radius: $border-radius-xsmall;
+          padding: $border-radius-xsmall $border-radius-xsmall $border-radius-xsmall 40px;
+          box-shadow:
+            4px 4px 9.6px rgba(0, 0, 0, 0.05),
+            0 8px 18px rgba(75, 0, 0, 0.05);
+          counter-increment: gradient-counter;
+          position: relative;
+          &::before,
+          &::after {
+            background-color: $color-background;
+            border-radius: 16px 16px 0 16px;
+            content: "";
+            height: 41.6px;
+            left: -16px;
+            overflow: hidden;
+            position: absolute;
+            top: -16px;
+            width: 41.6px;
+          }
+          &::before {
+            box-shadow:
+              4px 4px 9.6px rgba(0, 0, 0, 0.05),
+              0 8px 18px rgba(75, 0, 0, 0.05);
+            align-items: center;
+            justify-content: center;
+            content: attr(data-number);
+            color: $color-white;
+            display: flex;
+            font: 300 15px/1 $base-font;
+            z-index: 1;
+          }
+          a {
+            font-size: $font-size-custom;
+            font-weight: $font-weight-light;
+            color: $color-white;
+            &:hover {
+              .title-link {
+                transform: translateX(10px);
+              }
+            }
+            .title-link {
+              color: $color-background;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              transition: transform 0.2s ease-in-out;
+              @media (max-width: $breakpoint-large) {
+                font-size: $font-size-custom;
+              }
+              @media (max-width: $breakpoint-medium) {
+                font-size: 18px;
+              }
+              @media (max-width: $breakpoint-small) {
+                font-size: $font-size-medium;
+              }
+            }
+          }
+          .info {
+            font-size: $font-size-medium;
+            font-weight: $font-weight-light;
+            @include text-turnicate(2);
+            @media (max-width: $breakpoint-medium) {
+              font-size: $font-size-small;
+            }
+            @media (max-width: $breakpoint-small) {
+              @include text-turnicate(3);
+            }
+          }
+          .date {
+            color: $color-text;
+            font-size: $font-size-small;
+            @media (max-width: $breakpoint-medium) {
+              font-size: $font-size-xsmall;
+            }
+          }
+        }
+      }
+    }
+  }
+}
