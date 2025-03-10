@@ -12,7 +12,6 @@
         padding: $res-padding;
     }
     .container {
-        max-width: 1080px !important;
         .about-block {
             width: 100%;
             @include makeFlexForColum(20px);
@@ -28,7 +27,6 @@
                 text-transform: capitalize;
                 color: black;
             }
-       
             .road {
                 @include makeFlexForColum;
                 height: 100%;
@@ -249,7 +247,7 @@
                         }
                         > div:first-of-type {
                             display: flex;
-                            flex-direction: column !important;
+                            flex-direction: column ;
                             gap: 5px;
                             width: 100%;
                             div {
