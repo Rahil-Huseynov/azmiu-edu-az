@@ -7,6 +7,11 @@ a {
   justify-content: space-between;
   background-color: #0c4384;
   padding: 0 20px;
+  &__wrap-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
   #navbar__wrapper {
     display: flex;
     list-style: none;
@@ -17,11 +22,8 @@ a {
     padding: 0;
     margin: 0;
     max-height: 0;
-    overflow: hidden;
     display: none;
-    opacity: 0;
     height: 0;
-    transform: translateY(-10px);
   }
   &__submenu-item_head {
     line-height: 3;
@@ -35,14 +37,15 @@ a {
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
     height: auto;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 25px;
     font-family: sans-serif;
     position: absolute;
+    padding-left: 25px;
+
     left: 0;
-    transform: translateY(0);
     background-color: #0c4384;
   }
 
@@ -127,26 +130,48 @@ a {
   }
 }
 
-/* Dropdown default style */
 .navbar__dropdown {
-  opacity: 0; /* Dropdown is hidden by default */
-  transform: translateY(-50px); /* Position it above */
-  visibility: hidden; /* Prevents layout shift when closed */
-  transition: visibility 0s 0.3s, opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  opacity: 0;
+  transform: translateY(-50px);
+  visibility: hidden;
+  transition: visibility 0s 1s, opacity 1s ease, transform 1s ease;
 }
 
-/* When dropdown is active, show and animate it */
 .navbar__dropdown-active {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
   max-height: 100%;
-  animation: open 0.3s forwards; /* Open animation */
+  animation: open 1s forwards;
 }
 
-/* When dropdown is closing, animate it */
 .navbar__dropdown-closing {
-  animation: close 0.3s forwards; /* Close animation */
+  animation: close 1s forwards;
   visibility: hidden;
   opacity: 0;
+}
+.navbar__mobile {
+  display: none;
+}
+@media (max-width: 1050px) {
+  .navbar__menu-item_header_item-color {
+    font-size: 12px;
+  }
+  .navbar__submenu-item_down {
+    word-break: break-word;
+  }
+  .navbar__dropdown-active {
+    gap: 4rem;
+  }
+  .navbar__dropdown-item-container {
+    max-width: 150px;
+  }
+  .navbar__wrap-container {
+    display: none;
+  }
+  .navbar__mobile {
+    width: 100%;
+    display: block;
+    background-color: #0c4384;
+  }
 }
