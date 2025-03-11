@@ -1,22 +1,37 @@
-
-
-
 // Font Sizes
-// $font-size-small: 10px;
-// $font-size-medium: 16px;
-// $font-size-custom:20px;
-// $font-size-large: 24px;
-// $font-size-xlarge: 36px;
 $font-size-xsmall:10px;
 $font-size-small:12px;
 $font-size-medium: 15px;
 $font-size-large: 25px;
-$font-size-xlarge: 30px;
+$font-size-xlarge: 35px;
 $font-size-custom:20px;
 
-// padding
-$padding: 60px 0;
-$res-padding:60px 20px;
+
+//PADDING
+$section-padding:60px 0;
+$responsive-padding:60px 20px;
+$padding-xxsmall:5px;
+$padding-xsmall:10px;
+$padding-small:12px;
+$padding-medium: 15px;
+$padding-large: 30px;
+$padding-xlarge: 35px;
+$padding-custom:20px;
+
+
+//BORDER-RADIUS
+$border-radius-xxsmall:5px;
+$border-radius-xsmall:10px;
+$border-radius-small:12px;
+$border-radius-medium: 15px;
+$border-radius-large: 30px;
+$border-radius-xlarge: 35px;
+
+
+
+// FONT-FAMILY
+$base-font: sans-serif;
+
 // Font Weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
@@ -25,16 +40,16 @@ $font-weight-bolder: 900;
 
 // Colors
 $color-primary: #3498db;
+$color-white:white;
 $color-secondary: #2ecc71;
 $color-accent: #e74c3c;
 $color-background: #154384;
 $color-text: #2c3e50;
 $color-hover:#155783;
+$color-black:black;
 $color-orange:#f1aa61;
 $color-second-background:#eeeeee;
 
-// FONT-FAMILY
-$base-font: sans-serif;
 
 
 // Spacing
@@ -56,4 +71,3 @@ $breakpoint-small: 576px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
-

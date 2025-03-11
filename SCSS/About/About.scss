@@ -1,34 +1,26 @@
-@use '../variables' as *;
-@use '../map' as *;
-@use '../mixin' as *;
-@use '../global.scss';
-
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
 
 .about-section {
     background-color: $color-second-background;
     width: 100%;
-    padding: $padding;
-    @media (max-width:1200px){
-        padding: $res-padding;
+    padding: $section-padding;
+
+    @media (max-width: $breakpoint-xlarge) {
+        padding: $responsive-padding;
     }
     .container {
         .about-block {
             width: 100%;
             @include makeFlexForColum(20px);
-            .liner {
-                width: 100%;
-                height: 2px;
-                background-color: $color-orange;
-            }
             .title {
                 font-size: 30px;
-                font-family: $base-font;
-                font-weight: 300;
+                font-weight: $font-weight-light;
                 text-transform: capitalize;
-                color: black;
+                color: $color-black;
             }
             .road {
-                @include makeFlexForColum;
                 height: 100%;
                 .breadcrumb {
                     display: flex;
@@ -36,47 +28,41 @@
                     margin: auto;
                     text-align: center;
                     width: 100%;
-                    z-index: 1;
                     .breadcrumb__item {
                         transform: skew(-8deg);
-                        background-color: #ffffff;
-                        color: #252525;
-                        font-family: $base-font;
+                        background-color: $color-white;
                         border-radius: 3px;
                         transition: all 0.3s ease;
                         text-transform: uppercase;
-                        display: inline-flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 10px;
+                        @include flex-center(flex, center, center, null);
+                        font-size: $font-size-xsmall;
                         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
                         margin: 1px;
-                        padding: 5px 10px;
+                        padding: $padding-xxsmall $padding-xsmall;
                         cursor: pointer;
                         &:hover {
                             background: $color-background;
                             color: #fff;
                         }
-                        .breadcrumb__inner {
-                            transform: skew(8deg);  
-                            @include makeFlexForColum;
-                            margin: auto;
-                            z-index: 2;
-                            .breadcrumb__title {
-                                font-size: $font-size-xsmall;
-                                text-overflow: ellipsis;
-                                overflow: hidden;
-                                white-space: nowrap;
-                            }
+
+                        .breadcrumb__title {
+                            transform: skew(8deg);
+                            font-size: $font-size-xsmall;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
                         }
                     }
                 }
             }
+            .liner {
+                width: 100%;
+                height: 2px;
+                background-color: $color-orange;
+            }
             .about-bottom {
                 width: 100%;
-                display: flex;
-                gap: 20px;
-                justify-content: space-between;
+                @include flex-center(flex, space-between, null, 20px);
                 @media (max-width: $breakpoint-medium) {
                     flex-direction: column;
                 }
@@ -84,20 +70,18 @@
                     width: 100%;
                     @include makeFlexForColum(30px);
                     font-size: $font-size-medium;
-                    font-family: $base-font;
-                    padding: 20px;
-                    border-radius: 10px;
-                    background-color: white;
+                    padding: $padding-custom;
+                    border-radius: $border-radius-xsmall;
+                    background-color: $color-white;
                     .info-link {
                         width: 100%;
                         @include makeFlexForColum;
                         a {
-                            padding: 5px;
+                            padding: $padding-xxsmall;
                             border: 1px solid $color-second-background;
                             background-color: #ddd;
                             width: 100%;
                             color: $color-background;
-                            font-family: $base-font;
                             p {
                                 color: $color-background;
                             }
@@ -120,15 +104,13 @@
                                 width: 230px;
                                 height: 230px;
                                 object-fit: cover;
-                                border-radius: 10px;
+                                border-radius: $border-radius-xsmall;
                             }
                         }
                         > div:nth-of-type(n + 2) {
                             display: grid;
                             grid-template-columns: repeat(4, 1fr);
-                            flex-direction: row;
                             gap: 20px;
-                            justify-content: center;
                             @media (max-width: $breakpoint-large) {
                                 grid-template-columns: repeat(2, 1fr);
                             }
@@ -141,7 +123,7 @@
                                 width: 150px;
                                 height: 150px;
                                 object-fit: cover;
-                                border-radius: 10px;
+                                border-radius: $border-radius-xsmall;
                             }
                         }
                         div {
@@ -172,10 +154,8 @@
                     .rating {
                         @include makeFlexForColum(15px);
                         div {
-                            display: flex;
-                            align-items: center;
+                            @include flex-center(flex, null, center, 10px);
                             width: 100%;
-                            gap: 10px;
                             @media (max-width: $breakpoint-xsmall) {
                                 flex-direction: column;
                                 gap: 5px;
@@ -187,7 +167,7 @@
                                 }
                             }
                             p {
-                                font-size: 15px;
+                                font-size: $padding-medium;
                                 @media (max-width: $breakpoint-xsmall) {
                                     text-align: center;
                                     font-size: $font-size-small;
@@ -204,8 +184,7 @@
                                 text-transform: capitalize;
                                 font-size: 18px;
                                 font-weight: bold;
-                                font-family: $base-font;
-                                padding: 5px;
+                                padding: $padding-xxsmall;
                                 border-bottom: 5px solid rgb(159, 155, 155);
                                 background-color: #ddd;
                                 @media (max-width: $breakpoint-xsmall) {
@@ -214,8 +193,7 @@
                             }
                             p {
                                 color: $color-background;
-                                font-weight: 300;
-                                font-family: $base-font;
+                                font-weight: $font-weight-light;
                                 font-size: $font-size-medium;
                                 @media (max-width: $breakpoint-xsmall) {
                                     font-size: $font-size-small;
@@ -225,7 +203,7 @@
                                 @include makeFlexForColum(10px);
                                 li {
                                     font-size: $font-size-medium;
-                                    font-weight: 300;
+                                    font-weight: $font-weight-light;
                                     list-style: disc;
                                     margin-left: 14px;
                                     color: $color-background;
@@ -240,19 +218,15 @@
                         @include makeFlexForColum(20px);
                         align-items: center;
                         img {
-                            place-items: center;
                             height: 250px;
                             border: 2px solid $color-background;
-                            padding: 5px;
+                            padding: $padding-xxsmall;
                         }
                         > div:first-of-type {
-                            display: flex;
-                            flex-direction: column ;
-                            gap: 5px;
+                            @include makeFlexForColum(5px);
                             width: 100%;
                             div {
-                                display: flex;
-                                align-items: center;
+                                @include flex-center(flex, null, center, null);
                                 > span:first-of-type {
                                     text-transform: capitalize;
                                     font-weight: bold;
@@ -261,16 +235,16 @@
                                         font-size: $font-size-small;
                                     }
                                     a {
-                                        font-weight: 300;
+                                        font-weight: $font-weight-light;
                                         color: $color-background;
                                         &:hover {
                                             text-decoration: underline;
-                                            -moz-text-decoration-color:$color-background;
+                                            -moz-text-decoration-color: $color-background;
                                         }
                                     }
                                 }
                                 > span:nth-of-type(n + 2) {
-                                    font-weight: 300;
+                                    font-weight: $font-weight-light;
                                     font-size: $font-size-medium;
                                     @media (max-width: $breakpoint-xsmall) {
                                         font-size: $font-size-small;
@@ -292,7 +266,7 @@
                             }
                             p {
                                 font-size: $font-size-medium;
-                                font-weight: 300;
+                                font-weight: $font-weight-light;
                                 @media (max-width: $breakpoint-xsmall) {
                                     font-size: $font-size-small;
                                 }
@@ -306,7 +280,7 @@
                                     font-size: $font-size-small;
                                 }
                                 a {
-                                    font-weight: 300;
+                                    font-weight: $font-weight-light;
                                     color: $color-background;
                                     font-style: normal;
                                     &:hover {
@@ -331,22 +305,21 @@
                             }
                         }
                         th {
-                            background-color: #f2f2f2;
+                            background-color: $color-second-background;
                         }
                     }
                 }
                 .menu {
-                    font-family: $base-font;
                     position: sticky;
-                    top: 50px;
+                    top: 0;
                     height: 100%;
-                    background-color:$color-background;
-                    border-radius: 10px;
+                    background-color: $color-background;
+                    border-radius: $border-radius-xsmall;
                     overflow: hidden;
 
                     .menu-header {
                         background-color: $color-background;
-                        color: #ff9900;
+                        color: $color-orange;
                         font-weight: bold;
                         padding: $font-size-medium;
                         text-align: left;
@@ -354,18 +327,15 @@
 
                     ul {
                         list-style-type: none;
-                        padding: 0;
-                        margin: 0;
-
                         > li:hover {
                             color: $color-orange;
                         }
                     }
 
                     li {
-                        padding: 12px;
+                        padding: $padding-small;
                         border-top: 1px solid rgba(255, 255, 255, 0.2);
-                        color: white;
+                        color: $color-white;
                         cursor: pointer;
                         @media (max-width: $breakpoint-xsmall) {
                             font-size: $font-size-medium;
@@ -375,15 +345,14 @@
                     li:not(.submenu)::before {
                         content: "• ";
                     }
-
                     .submenu {
                         position: relative;
-                        font-family: $base-font;
 
                         &::before {
                             content: "› ";
                             font-weight: bold;
                             transition: transform 0.3s ease;
+                            display: inline-block;
                         }
 
                         .submenu-container {
@@ -393,22 +362,21 @@
                             transition:
                                 max-height 0.4s ease-out,
                                 opacity 0.4s ease-out;
-                            border-radius: 5px;
-                            padding-left: 10px;
-                            padding-top: 0;
-                            display: flex;
-                            flex-direction: column;
+                            border-radius: $border-radius-xxsmall;
+                            padding: 0 0 0 $padding-xsmall;
+                            @include makeFlexForColum();
                             height: auto;
 
                             li {
-                                font-size: $font-size-small;
-                                padding: 5px 0 5px 10px;
+                                font-size: 14px;
+                                padding: $padding-xxsmall 0 $padding-xxsmall $padding-xsmall;
                                 border-top: none;
                             }
                         }
 
                         &.active {
                             &::before {
+                                transition: 0.2s;
                                 transform: rotate(90deg);
                             }
 
@@ -422,5 +390,4 @@
             }
         }
     }
-} 
-
+}
