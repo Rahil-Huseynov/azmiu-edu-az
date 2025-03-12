@@ -1,8 +1,15 @@
 * {
+<<<<<<< HEAD
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
+=======
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+>>>>>>> AZMIU-17
   text-decoration: none;
 }
 
@@ -14,3 +21,11 @@ body {
   max-width: 1080px;
   margin: 0 auto;
 }
+<<<<<<< HEAD
+=======
+
+.active-blue {
+  background-color: #154384 !important;
+  color: white !important;
+}
+>>>>>>> AZMIU-17

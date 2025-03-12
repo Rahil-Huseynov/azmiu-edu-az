@@ -1,0 +1,393 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
+.about-section {
+    background-color: $color-second-background;
+    width: 100%;
+    padding: $section-padding;
+
+    @media (max-width: $breakpoint-xlarge) {
+        padding: $responsive-padding;
+    }
+    .container {
+        .about-block {
+            width: 100%;
+            @include makeFlexForColum(20px);
+            .title {
+                font-size: 30px;
+                font-weight: $font-weight-light;
+                text-transform: capitalize;
+                color: $color-black;
+            }
+            .road {
+                height: 100%;
+                .breadcrumb {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: auto;
+                    text-align: center;
+                    width: 100%;
+                    .breadcrumb__item {
+                        transform: skew(-8deg);
+                        background-color: $color-white;
+                        border-radius: 3px;
+                        transition: all 0.3s ease;
+                        text-transform: uppercase;
+                        @include flex-center(flex, center, center, null);
+                        font-size: $font-size-xsmall;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+                        margin: 1px;
+                        padding: $padding-xxsmall $padding-xsmall;
+                        cursor: pointer;
+                        &:hover {
+                            background: $color-background;
+                            color: #fff;
+                        }
+
+                        .breadcrumb__title {
+                            transform: skew(8deg);
+                            font-size: $font-size-xsmall;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .liner {
+                width: 100%;
+                height: 2px;
+                background-color: $color-orange;
+            }
+            .about-bottom {
+                width: 100%;
+                @include flex-center(flex, space-between, null, 20px);
+                @media (max-width: $breakpoint-medium) {
+                    flex-direction: column;
+                }
+                .information {
+                    width: 100%;
+                    @include makeFlexForColum(30px);
+                    font-size: $font-size-medium;
+                    padding: $padding-custom;
+                    border-radius: $border-radius-xsmall;
+                    background-color: $color-white;
+                    .info-link {
+                        width: 100%;
+                        @include makeFlexForColum;
+                        a {
+                            padding: $padding-xxsmall;
+                            border: 1px solid $color-second-background;
+                            background-color: #ddd;
+                            width: 100%;
+                            color: $color-background;
+                            p {
+                                color: $color-background;
+                            }
+                            &:hover {
+                                p {
+                                    transition: 0.3s;
+                                    transform: translateX(10px);
+                                }
+                            }
+                        }
+                    }
+                    .leadership {
+                        @include makeFlexForColum(50px);
+                        align-items: center;
+                        > div:first-of-type {
+                            @include flex-center;
+                            img {
+                                border: 2px solid $color-background;
+                                padding: 3px;
+                                width: 230px;
+                                height: 230px;
+                                object-fit: cover;
+                                border-radius: $border-radius-xsmall;
+                            }
+                        }
+                        > div:nth-of-type(n + 2) {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            gap: 20px;
+                            @media (max-width: $breakpoint-large) {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                            @media (max-width: $breakpoint-xsmall) {
+                                grid-template-columns: repeat(1, 1fr);
+                            }
+                            img {
+                                border: 2px solid $color-background;
+                                padding: 3px;
+                                width: 150px;
+                                height: 150px;
+                                object-fit: cover;
+                                border-radius: $border-radius-xsmall;
+                            }
+                        }
+                        div {
+                            @include makeFlexForColum(10px);
+                            @include flex-center;
+                            a {
+                                &:hover {
+                                    text-decoration: underline;
+                                    text-decoration-color: $color-background;
+                                }
+                                > p:first-of-type {
+                                    font-weight: bold;
+                                    text-transform: capitalize;
+                                    font-size: 18px;
+                                    color: $color-background;
+                                    text-align: center;
+                                }
+                                > p:nth-of-type(n + 2) {
+                                    text-transform: capitalize;
+                                    font-weight: lighter;
+                                    font-size: $font-size-medium;
+                                    color: $color-background;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .rating {
+                        @include makeFlexForColum(15px);
+                        div {
+                            @include flex-center(flex, null, center, 10px);
+                            width: 100%;
+                            @media (max-width: $breakpoint-xsmall) {
+                                flex-direction: column;
+                                gap: 5px;
+                            }
+                            img {
+                                height: 60px;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    height: 45px;
+                                }
+                            }
+                            p {
+                                font-size: $padding-medium;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    text-align: center;
+                                    font-size: $font-size-small;
+                                }
+                            }
+                        }
+                    }
+                    .history {
+                        @include makeFlexForColum(15px);
+                        width: 100%;
+                        div {
+                            @include makeFlexForColum(10px);
+                            h4 {
+                                text-transform: capitalize;
+                                font-size: 18px;
+                                font-weight: bold;
+                                padding: $padding-xxsmall;
+                                border-bottom: 5px solid rgb(159, 155, 155);
+                                background-color: #ddd;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-medium;
+                                }
+                            }
+                            p {
+                                color: $color-background;
+                                font-weight: $font-weight-light;
+                                font-size: $font-size-medium;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-small;
+                                }
+                            }
+                            ul {
+                                @include makeFlexForColum(10px);
+                                li {
+                                    font-size: $font-size-medium;
+                                    font-weight: $font-weight-light;
+                                    list-style: disc;
+                                    margin-left: 14px;
+                                    color: $color-background;
+                                    @media (max-width: $breakpoint-xsmall) {
+                                        font-size: $font-size-small;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .journal {
+                        @include makeFlexForColum(20px);
+                        align-items: center;
+                        img {
+                            height: 250px;
+                            border: 2px solid $color-background;
+                            padding: $padding-xxsmall;
+                        }
+                        > div:first-of-type {
+                            @include makeFlexForColum(5px);
+                            width: 100%;
+                            div {
+                                @include flex-center(flex, null, center, null);
+                                > span:first-of-type {
+                                    text-transform: capitalize;
+                                    font-weight: bold;
+                                    font-size: $font-size-medium;
+                                    @media (max-width: $breakpoint-xsmall) {
+                                        font-size: $font-size-small;
+                                    }
+                                    a {
+                                        font-weight: $font-weight-light;
+                                        color: $color-background;
+                                        &:hover {
+                                            text-decoration: underline;
+                                            -moz-text-decoration-color: $color-background;
+                                        }
+                                    }
+                                }
+                                > span:nth-of-type(n + 2) {
+                                    font-weight: $font-weight-light;
+                                    font-size: $font-size-medium;
+                                    @media (max-width: $breakpoint-xsmall) {
+                                        font-size: $font-size-small;
+                                    }
+                                }
+                            }
+                        }
+                        > div:nth-of-type(n + 2) {
+                            @include makeFlexForColum(10px);
+                            align-items: center;
+                            h4 {
+                                text-align: center;
+                                font-style: italic;
+                                font-weight: bold;
+                                font-size: 18px;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-medium;
+                                }
+                            }
+                            p {
+                                font-size: $font-size-medium;
+                                font-weight: $font-weight-light;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-small;
+                                }
+                            }
+
+                            span {
+                                font-style: italic;
+                                font-weight: bold;
+                                width: 100%;
+                                @media (max-width: $breakpoint-xsmall) {
+                                    font-size: $font-size-small;
+                                }
+                                a {
+                                    font-weight: $font-weight-light;
+                                    color: $color-background;
+                                    font-style: normal;
+                                    &:hover {
+                                        text-decoration: underline;
+                                        -moz-text-decoration-color: $color-background;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    table {
+                        width: 70%;
+                        border-collapse: collapse;
+                        text-align: center;
+                        th,
+                        td {
+                            font-size: $font-size-medium;
+                            border: 1px solid black;
+                            padding: 8px;
+                            @media (max-width: $breakpoint-xsmall) {
+                                font-size: $font-size-small;
+                            }
+                        }
+                        th {
+                            background-color: $color-second-background;
+                        }
+                    }
+                }
+                .menu {
+                    position: sticky;
+                    top: 10px;
+                    height: 100%;
+                    background-color: $color-background;
+                    border-radius: $border-radius-xsmall;
+                    overflow: hidden;
+
+                    .menu-header {
+                        background-color: $color-background;
+                        color: $color-orange;
+                        font-weight: bold;
+                        padding: $font-size-medium;
+                        text-align: left;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        > li:hover {
+                            color: $color-orange;
+                        }
+                    }
+
+                    li {
+                        padding: $padding-small;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                        color: $color-white;
+                        cursor: pointer;
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: $font-size-medium;
+                        }
+                    }
+
+                    li:not(.submenu)::before {
+                        content: "• ";
+                    }
+                    .submenu {
+                        position: relative;
+
+                        &::before {
+                            content: "› ";
+                            font-weight: bold;
+                            transition: transform 0.3s ease;
+                            display: inline-block;
+                        }
+
+                        .submenu-container {
+                            max-height: 0;
+                            overflow: hidden;
+                            opacity: 0;
+                            transition:
+                                max-height 0.4s ease-out,
+                                opacity 0.4s ease-out;
+                            border-radius: $border-radius-xxsmall;
+                            padding: 0 0 0 $padding-xsmall;
+                            @include makeFlexForColum();
+                            height: auto;
+
+                            li {
+                                font-size: 14px;
+                                padding: $padding-xxsmall 0 $padding-xxsmall $padding-xsmall;
+                                border-top: none;
+                            }
+                        }
+
+                        &.active {
+                            &::before {
+                                transition: 0.2s;
+                                transform: rotate(90deg);
+                            }
+
+                            .submenu-container {
+                                opacity: 1;
+                                max-height: var(--dynamic-height);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
