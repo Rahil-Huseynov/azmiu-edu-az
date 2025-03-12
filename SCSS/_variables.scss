@@ -1,9 +1,10 @@
 // Font Sizes
-$font-size-small: 10px;
-$font-size-medium: 16px;
-$font-size-custom:20px;
-$font-size-large: 24px;
-$font-size-xlarge: 36px;
+$font-size-xsmall: 10px;
+$font-size-small: 12px;
+$font-size-medium: 15px;
+$font-size-large: 25px;
+$font-size-xlarge: 35px;
+$font-size-custom: 20px;
 
 // Font Weights
 $font-weight-light: 300;
@@ -17,9 +18,15 @@ $color-secondary: #2ecc71;
 $color-accent: #e74c3c;
 $color-background: #154384;
 $color-text: #2c3e50;
-$color-hover:#155783;
-$color-orange:#f1aa61;
-$color-second-background:#eeeeee;
+$color-hover: #155783;
+$color-orange: #f1aa61;
+$color-second-background: #eeeeee;
+$dark-blue: rgb(12, 67, 132);
+$deactive: rgb(93, 110, 130);
+$deactive-gray: rgb(98, 98, 97);
+$gray: rgb(68, 68, 68);
+$hover-color: rgb(245, 168, 66);
+$background-color: rgb(246, 246, 246);
 
 // Spacing
 $spacing-small: 8px;
@@ -32,10 +39,8 @@ $border-radius-small: 4px;
 $border-radius-medium: 8px;
 $border-radius-large: 16px;
 
-
 // Media Queries
 $breakpoint-small: 576px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1200px;
-

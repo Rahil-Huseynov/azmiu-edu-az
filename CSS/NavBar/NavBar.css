@@ -3,15 +3,11 @@ a {
   text-decoration: none;
 }
 
-.navbar {
+.navbar__wrap-container {
   display: flex;
   justify-content: space-between;
   background-color: #0c4384;
   padding: 0 20px;
-}
-.navbar__wrap-container {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 .navbar #navbar__wrapper {
@@ -167,10 +163,5 @@ a {
   }
   .navbar__wrap-container {
     display: none;
-  }
-  .navbar__mobile {
-    width: 100%;
-    display: block;
-    background-color: #0c4384;
   }
 }

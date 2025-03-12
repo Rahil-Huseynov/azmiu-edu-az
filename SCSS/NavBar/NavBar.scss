@@ -3,13 +3,11 @@ a {
   text-decoration: none;
 }
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #0c4384;
-  padding: 0 20px;
   &__wrap-container {
     display: flex;
     justify-content: space-between;
+    background-color: #0c4384;
+    padding: 0 20px;
     width: 100%;
   }
   #navbar__wrapper {
@@ -157,6 +155,7 @@ a {
   .navbar__menu-item_header_item-color {
     font-size: 12px;
   }
+
   .navbar__submenu-item_down {
     word-break: break-word;
   }
@@ -168,10 +167,5 @@ a {
   }
   .navbar__wrap-container {
     display: none;
-  }
-  .navbar__mobile {
-    width: 100%;
-    display: block;
-    background-color: #0c4384;
   }
 }

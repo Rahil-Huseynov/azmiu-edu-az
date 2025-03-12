@@ -49,3 +49,9 @@
 .header__riba-logo-img {
   height: 35px;
 }
+
+@media (max-width: 1050px) {
+  .header__inner {
+    display: none;
+  }
+}

@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelectorAll(".navbar__dropdown-active")
         .forEach((dropdown) => {
           dropdown.classList.remove("navbar__dropdown-active");
-          dropdown.classList.add("navbar__dropdown-closing"); // Close dropdowns if clicked outside
+          dropdown.classList.add("navbar__dropdown-closing");
           const arrow = dropdown
             .closest(".navbar__menu-item")
             .querySelector(".navbar__arrow-icon");
