@@ -366,7 +366,7 @@
 }
 .about-section .container .about-block .about-bottom .menu {
   position: sticky;
-  top: 0;
+  top: 10px;
   height: 100%;
   background-color: #154384;
   border-radius: 10px;
