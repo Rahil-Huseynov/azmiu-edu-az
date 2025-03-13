@@ -1,0 +1,95 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
+.news-page-title {
+    padding: $section-padding;
+    width: 100%;
+    @include flex-center(flex, center, center, null);
+    background-color: $color-second-background;
+    @media (max-width: $breakpoint-xlarge) {
+        padding: $responsive-padding;
+    }
+    .container {
+        .news-block {
+            width: 100%;
+            @include makeFlexForColum(20px);
+            .title {
+                font-size: 30px;
+                font-style: italic;
+                color: $color-background;
+                text-transform: capitalize;
+                @media (max-width: $breakpoint-medium) {
+                    text-align: center;
+                    font-size: $font-size-large;
+                }
+            }
+            .liner {
+                height: 2px;
+                width: 100%;
+                background-color: $color-orange;
+            }
+            .information {
+                font-weight: $font-weight-light;
+                @include makeFlexForColum(30px);
+                font-size: $font-size-medium;
+                width: 100%;
+                height: auto;
+                padding: $padding-custom;
+                border-radius: $border-radius-xsmall;
+                background-color: $color-white;
+                .info-img {
+                    width: 100%;
+                    @include flex-center(flex, null, center, 10px);
+                    flex-wrap: wrap;
+                    img {
+                        border: 3px solid $color-background;
+                        padding: 3px;
+                        width: 250px;
+                        height: 250px;
+                        object-fit: cover;
+                        border-radius: $border-radius-xsmall;
+                    }
+                }
+                .link {
+                    display: flex;
+                    gap: 15px;
+                    a {
+                        border-radius: $border-radius-xsmall;
+                        @include flex-center(flex, center, center, null);
+                        width: 40px;
+                        height: 40px;
+                        transition: 0.2s;
+                        i {
+                            background-color: transparent;
+                            color: $color-white;
+                        }
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .facebook {
+                        background-color: rgb(78, 105, 162);
+                    }
+                    .twitter {
+                        background-color: rgb(102, 180, 240);
+                    }
+                    .linkedin {
+                        background-color: rgb(90, 131, 187);
+                    }
+                    .whatsapp {
+                        background-color: rgb(85, 220, 101);
+                    }
+                }
+            }
+            .date {
+                font-size: $font-size-medium;
+                color: $color-background;
+                width: 100%;
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+}

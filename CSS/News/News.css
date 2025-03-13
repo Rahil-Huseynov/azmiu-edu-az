@@ -1,0 +1,103 @@
+.news-page-title {
+  padding: 60px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+}
+@media (max-width: 1200px) {
+  .news-page-title {
+    padding: 60px 20px;
+  }
+}
+.news-page-title .container .news-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.news-page-title .container .news-block .title {
+  font-size: 30px;
+  font-style: italic;
+  color: #154384;
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  .news-page-title .container .news-block .title {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+.news-page-title .container .news-block .liner {
+  height: 2px;
+  width: 100%;
+  background-color: #f1aa61;
+}
+.news-page-title .container .news-block .information {
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 15px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+.news-page-title .container .news-block .information .info-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.news-page-title .container .news-block .information .info-img img {
+  border: 3px solid #154384;
+  padding: 3px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.news-page-title .container .news-block .information .link {
+  display: flex;
+  gap: 15px;
+}
+.news-page-title .container .news-block .information .link a {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s;
+}
+.news-page-title .container .news-block .information .link a i {
+  background-color: transparent;
+  color: white;
+}
+.news-page-title .container .news-block .information .link a:hover {
+  transform: scale(1.1);
+}
+.news-page-title .container .news-block .information .link .facebook {
+  background-color: rgb(78, 105, 162);
+}
+.news-page-title .container .news-block .information .link .twitter {
+  background-color: rgb(102, 180, 240);
+}
+.news-page-title .container .news-block .information .link .linkedin {
+  background-color: rgb(90, 131, 187);
+}
+.news-page-title .container .news-block .information .link .whatsapp {
+  background-color: rgb(85, 220, 101);
+}
+.news-page-title .container .news-block .date {
+  font-size: 15px;
+  color: #154384;
+  width: 100%;
+}
+.news-page-title .container .news-block .date span {
+  float: right;
+}

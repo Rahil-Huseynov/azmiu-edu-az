@@ -1,9 +1,9 @@
 @use "./map";
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin text-turnicate($line-clamp) {
@@ -14,53 +14,54 @@
 }
 
 @mixin box-shadow($x, $y, $blur, $color) {
-  -webkit-box-shadow: $x $y $blur $color;
-  -moz-box-shadow: $x $y $blur $color;
-  box-shadow: $x $y $blur $color;
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
 }
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@mixin flex-center($display: flex, $justify-content: null, $align-items: null, $gap:null) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
 }
 
 @mixin makeColorFix($color: null, $size: null, $weight: null) {
-  color: map-get(map.$colors, $color);
-  font-size: map-get(map.$fonts, sizes) [$size];
-  font-weight: map-get(map.$fonts, weights) [$weight];
+    color: map-get(map.$colors, $color);
+    font-size: map-get(map.$fonts, sizes) [$size];
+    font-weight: map-get(map.$fonts, weights) [$weight];
 }
 
 @mixin makeFlexForColum($gap: null) {
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
 }
 @mixin makeFlexForRow($gap: null) {
-  display: flex;
-  flex-direction: row;
-  gap: $gap;
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
 }
 @mixin makeFlexForWrap($gap: null) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $gap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
 }
 
 @mixin dropdown_position($top: null, $left: null, $right: null, $bottom: null) {
-  position: absolute;
+    position: absolute;
 
-  @if $top != null {
-    top: $top;
-  }
-  @if $left != null {
-    left: $left;
-  }
-  @if $right != null {
-    right: $right;
-  }
-  @if $bottom != null {
-    bottom: $bottom;
-  }
-  z-index: 1000; // Ensures dropdown stays above other elements
+    @if $top != null {
+        top: $top;
+    }
+    @if $left != null {
+        left: $left;
+    }
+    @if $right != null {
+        right: $right;
+    }
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+    z-index: 1000;
 }
