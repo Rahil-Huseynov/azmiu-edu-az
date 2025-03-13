@@ -1,74 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../CSS/global.css" />
-    <link rel="stylesheet" href="../../CSS/Header/Header.css" />
-    <link rel="stylesheet" href="../../CSS/NavBar/NavBar.css" />
-    <link rel="stylesheet" href="../../CSS/NavBarMobile/NavBarMobile.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>AZMIU</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../CSS/global.css" />
+  <link rel="stylesheet" href="../../CSS/Header/Header.css" />
+  <link rel="stylesheet" href="../../CSS/NavBar/NavBar.css" />
+  <link rel="stylesheet" href="../../CSS/NavBarMobile/NavBarMobile.css" />
 
-  <body>
-    <header class="header">
-      <div class="header__inner">
-        <div class="header__top-header">
-          <div class="header__menu">
-            <a href="" class="header__menu-link">Müəllim kabineti</a>
-            <a href="" class="header__menu-link">Tələbə kabineti</a>
-            <a href="" class="header__menu-link">Webmail</a>
-            <a href="" class="header__menu-link">Rektorla əlaqə</a>
-          </div>
-          <ul class="header__language">
-            <li class="header__language-item az active">AZ</li>
-            <li class="header__language-item en">EN</li>
-            <li class="header__language-item ru">RU</li>
-          </ul>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>AZMIU</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__top-header">
+        <div class="header__menu">
+          <a href="" class="header__menu-link">Müəllim kabineti</a>
+          <a href="" class="header__menu-link">Tələbə kabineti</a>
+          <a href="" class="header__menu-link">Webmail</a>
+          <a href="" class="header__menu-link">Rektorla əlaqə</a>
         </div>
-        <div class="header__middle-header">
-          <a href="./Home.html" class="header__azmiu-logo logo">
-            <img
-              class="header__azmiu-logo-img"
-              src="../../assets/images/azmiu-logo.png"
-              alt=""
-            />
-          </a>
-          <a href="1" class="header__riba-logo logo">
-            <img
-              class="header__riba-logo-img"
-              src="../../assets/images/ribalogo.png"
-              alt=""
-            />
-          </a>
-        </div>
+        <ul class="header__language">
+          <li class="header__language-item az active">AZ</li>
+          <li class="header__language-item en">EN</li>
+          <li class="header__language-item ru">RU</li>
+        </ul>
       </div>
-    </header>
-    <nav class="navbar">
-      <div class="navbar__wrap-container">
+      <div class="header__middle-header">
+        <a href="./Home.html" class="header__azmiu-logo logo">
+          <img class="header__azmiu-logo-img" src="../../assets/images/azmiu-logo.png" alt="" />
+        </a>
+        <a href="1" class="header__riba-logo logo">
+          <img class="header__riba-logo-img" src="../../assets/images/ribalogo.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <nav class="navbar">
+    <div class="navbar__wrap-container">
       <ul id="navbar__wrapper">
         <li class="navbar__menu-item">
           <div class="navbar__menu-item_header_item">
             <a class="navbar__menu-item_header_item-color" href="#">Universitet</a>
             <i class="fa-solid fa-angle-down angle-down navbar__arrow-icon" aria-hidden="true"></i>
-          <span class="navbar__line"></span>
+            <span class="navbar__line"></span>
 
           </div>
           <ul class="navbar__dropdown">
             <div class="navbar__dropdown-item-container">
               <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p > UNIVERSITET</p>
+                <p> UNIVERSITET</p>
               </li>
               <div class="navbar__submenu-item_down_container">
-  
+
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Haqqında</a>
                 </li>
@@ -97,7 +86,7 @@
                 <p>MƏRKƏZLƏR</p>
               </li>
               <div class="navbar__submenu-item_down_container">
-  
+
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Təcrübə və Karyera Mərkəzi </a>
                 </li>
@@ -111,16 +100,19 @@
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Avicenna mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və monitorinq mərkəzi </a>
+                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və monitorinq
+                    mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Dil mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya mərkəzi </a>
+                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya mərkəzi
+                  </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və Marketinq mərkəzi </a>
+                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və Marketinq
+                    mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura mərkəzi </a>
@@ -132,7 +124,7 @@
                 <p>ŞÖBƏLƏR</p>
               </li>
               <div class="navbar__submenu-item_down_container">
-  
+
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Xarici əlaqələr şöbəsi</a>
                 </li>
@@ -156,7 +148,7 @@
                 </li>
               </div>
             </div>
-  
+
             <div class="navbar__dropdown-item-container">
               <li class="navbar__submenu-item navbar__submenu-item_head">
                 <p> DİGƏR STRUKTUR BÖLMƏLƏRİ </p>
@@ -184,323 +176,341 @@
             </div>
           </ul>
         </li>
-        <li  class="navbar__menu-item">
+        <li class="navbar__menu-item">
           <div class="navbar__menu-item_header_item">
-            <a  class="navbar__menu-item_header_item-color"  href="#">
+            <a class="navbar__menu-item_header_item-color" href="#">
               Akademik fəaliyyət
-              </a>
-              <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
-          <span class="navbar__line"></span>
+            </a>
+            <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
+            <span class="navbar__line"></span>
 
 
           </div>
           <div class="navbar__dropdown-item-container">
-          <ul class="navbar__dropdown">
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p>FAKÜLTƏLƏR</p> 
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-  
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+            <ul class="navbar__dropdown">
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p>FAKÜLTƏLƏR</p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> 
-                    Su təsərrüfatı və mühəndis kommunikasiya sistemləri
-                    fakültəsi
-                  </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya texnologiyaları fakültəsi</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili dekanlığı</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı fakültəsi</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
-                </li>
+                <div class="navbar__submenu-item_down_container">
+
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">
+                      Su təsərrüfatı və mühəndis kommunikasiya sistemləri
+                      fakültəsi
+                    </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya
+                      texnologiyaları fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili
+                      dekanlığı</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı
+                      fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
+                  </li>
+                </div>
               </div>
-            </div>
-           
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p>TƏHSİL</p>
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-  
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p>TƏHSİL</p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
-                </li>
+                <div class="navbar__submenu-item_down_container">
+
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
+                  </li>
+                </div>
               </div>
-            </div>
-  
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p > TƏDRİS </p>
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p> TƏDRİS </p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
-                </li>
-                
+                <div class="navbar__submenu-item_down_container">
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
+                  </li>
+
+                </div>
               </div>
-            </div>
-          </ul>
+            </ul>
         </li>
-        <li  class="navbar__menu-item">
+        <li class="navbar__menu-item">
           <div class="navbar__menu-item_header_item">
-            <a  class="navbar__menu-item_header_item-color"  href="#">
+            <a class="navbar__menu-item_header_item-color" href="#">
               Elmi-tədqiqat
-              </a>
-              <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
-          <span class="navbar__line"></span>
+            </a>
+            <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
+            <span class="navbar__line"></span>
 
 
           </div>
           <div class="navbar__dropdown-item-container">
-          <ul class="navbar__dropdown">
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p>
-                  Elmi-tədqiqat
-                  </p> 
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-  
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+            <ul class="navbar__dropdown">
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p>
+                    Elmi-tədqiqat
+                  </p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> 
-                    Su təsərrüfatı və mühəndis kommunikasiya sistemləri
-                    fakültəsi
-                  </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya texnologiyaları fakültəsi</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili dekanlığı</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı fakültəsi</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
-                </li>
+                <div class="navbar__submenu-item_down_container">
+
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">
+                      Su təsərrüfatı və mühəndis kommunikasiya sistemləri
+                      fakültəsi
+                    </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya
+                      texnologiyaları fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili
+                      dekanlığı</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı
+                      fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
+                  </li>
+                </div>
               </div>
-            </div>
-           
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p>TƏHSİL</p>
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-  
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p>TƏHSİL</p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
-                </li>
+                <div class="navbar__submenu-item_down_container">
+
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
+                  </li>
+                </div>
               </div>
-            </div>
-  
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p > TƏDRİS </p>
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p> TƏDRİS </p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
-                </li>
-                
+                <div class="navbar__submenu-item_down_container">
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
+                  </li>
+
+                </div>
               </div>
-            </div>
-          </ul>
+            </ul>
         </li>
-        <li  class="navbar__menu-item">
+        <li class="navbar__menu-item">
           <div class="navbar__menu-item_header_item">
-            <a  class="navbar__menu-item_header_item-color"  href="#">
+            <a class="navbar__menu-item_header_item-color" href="#">
               Akademik fəaliyyət
-              </a>
-              <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
-          <span class="navbar__line"></span>
+            </a>
+            <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
+            <span class="navbar__line"></span>
 
 
           </div>
           <div class="navbar__dropdown-item-container">
-          <ul class="navbar__dropdown">
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p>FAKÜLTƏLƏR</p> 
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-  
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+            <ul class="navbar__dropdown">
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p>FAKÜLTƏLƏR</p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> 
-                    Su təsərrüfatı və mühəndis kommunikasiya sistemləri
-                    fakültəsi
-                  </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya texnologiyaları fakültəsi</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili dekanlığı</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı fakültəsi</a>
-                </li> <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
-                </li>
+                <div class="navbar__submenu-item_down_container">
+
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">
+                      Su təsərrüfatı və mühəndis kommunikasiya sistemləri
+                      fakültəsi
+                    </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya
+                      texnologiyaları fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili
+                      dekanlığı</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı
+                      fakültəsi</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
+                  </li>
+                </div>
               </div>
-            </div>
-           
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p>TƏHSİL</p>
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-  
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p>TƏHSİL</p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
-                </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
-                </li>
+                <div class="navbar__submenu-item_down_container">
+
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
+                  </li>
+                </div>
               </div>
-            </div>
-  
-            <div class="navbar__dropdown-item-container">
-              <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p > TƏDRİS </p>
-                
-              </li>
-              <div class="navbar__submenu-item_down_container">
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+
+              <div class="navbar__dropdown-item-container">
+                <li class="navbar__submenu-item navbar__submenu-item_head">
+                  <p> TƏDRİS </p>
+
                 </li>
-                <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
-                </li>
-                
+                <div class="navbar__submenu-item_down_container">
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+                  </li>
+                  <li class="navbar__submenu-item navbar__submenu-item_down">
+                    <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
+                  </li>
+
+                </div>
               </div>
-            </div>
-          </ul>
+            </ul>
 
         </li>
         <li class="navbar__menu-item">
           <div class="navbar__menu-item_header_item">
             <a class="navbar__menu-item_header_item-color" href="#">Universitet</a>
             <i class="fa-solid fa-angle-down angle-down navbar__arrow-icon" aria-hidden="true"></i>
-          <span class="navbar__line"></span>
+            <span class="navbar__line"></span>
 
           </div>
           <ul class="navbar__dropdown">
             <div class="navbar__dropdown-item-container">
               <li class="navbar__submenu-item navbar__submenu-item_head">
-                <p > UNIVERSITET</p>
+                <p> UNIVERSITET</p>
               </li>
               <div class="navbar__submenu-item_down_container">
-  
+
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}">Haqqında</a>
                 </li>
@@ -529,7 +539,7 @@
                 <p>MƏRKƏZLƏR</p>
               </li>
               <div class="navbar__submenu-item_down_container">
-  
+
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Təcrübə və Karyera Mərkəzi </a>
                 </li>
@@ -543,16 +553,19 @@
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Avicenna mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və monitorinq mərkəzi </a>
+                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və monitorinq
+                    mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Dil mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya mərkəzi </a>
+                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya mərkəzi
+                  </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
-                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və Marketinq mərkəzi </a>
+                  <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və Marketinq
+                    mərkəzi </a>
                 </li>
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Magistratura mərkəzi </a>
@@ -564,7 +577,7 @@
                 <p>ŞÖBƏLƏR</p>
               </li>
               <div class="navbar__submenu-item_down_container">
-  
+
                 <li class="navbar__submenu-item navbar__submenu-item_down">
                   <a class="navbar__submenu-item_down-white" href="{{ sub.link }}"> Xarici əlaqələr şöbəsi</a>
                 </li>
@@ -588,7 +601,7 @@
                 </li>
               </div>
             </div>
-  
+
             <div class="navbar__dropdown-item-container">
               <li class="navbar__submenu-item navbar__submenu-item_head">
                 <p> DİGƏR STRUKTUR BÖLMƏLƏRİ </p>
@@ -616,15 +629,30 @@
             </div>
           </ul>
         </li>
+
       </ul>
+      <div class="group">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+            ></path>
+          </g>
+        </svg>
+        <input class="input" type="search" placeholder="Search" />
+      </div>
       <div class="navbar__search-icon-wrapper">
         <span class="navbar__line"></span>
 
         <i class="fa-solid fa-magnifying-glass navbar__search_icon"></i>
       </div>
+      <div class="navbar__search-close-icon-wrapper">
+
+        <i class="fa-solid fa-xmark navbar__search_close_icon"></i>
+      </div>
     </div>
     <!-- MOBILE NAVBAR -->
-   
+
     <div class="navbar__mobile">
       <div class="navbar__mobile-container">
         <a href="./Home.html " class="navbar__mobile-logo">
@@ -635,9 +663,9 @@
             <i class="fa-solid fa-bars navbar__mobile-burger-btn-icon " aria-hidden="true"></i>
           </button>
         </div>
-       
+
       </div>
-      
+
     </div>
     <div class="navbar__mobile-dropdown ">
       <p class="navbar__mobile-close-btn ">&times;</p>
@@ -646,16 +674,16 @@
           <div class="navbar__burger-menu-item_header_item">
             <a class="navbar__burger-menu-item_header_item-color" href="#">Universitet</a>
             <i class="fa-solid fa-angle-down angle-down navbar__arrow-icon" aria-hidden="true"></i>
-         
+
 
           </div>
           <ul class="navbar__burger-dropdown">
             <div class="navbar__burger-dropdown-item-container">
               <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p > UNIVERSITET</p>
+                <p> UNIVERSITET</p>
               </li>
               <div class="navbar__burger-submenu-item_down_container">
-  
+
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Haqqında</a>
                 </li>
@@ -672,7 +700,8 @@
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Məzunlar</a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Beynəlxalq reytinq bazaları </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Beynəlxalq reytinq bazaları
+                  </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Rəsmi sənədlər</a>
@@ -684,9 +713,10 @@
                 <p>MƏRKƏZLƏR</p>
               </li>
               <div class="navbar__burger-submenu-item_down_container">
-  
+
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Təcrübə və Karyera Mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Təcrübə və Karyera Mərkəzi
+                  </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İKT mərkəzi </a>
@@ -698,16 +728,19 @@
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Avicenna mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və monitorinq mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və
+                    monitorinq mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Dil mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya
+                    mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və Marketinq mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və
+                    Marketinq mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura mərkəzi </a>
@@ -719,12 +752,13 @@
                 <p>ŞÖBƏLƏR</p>
               </li>
               <div class="navbar__burger-submenu-item_down_container">
-  
+
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Xarici əlaqələr şöbəsi</a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Strateji planlaşdırma şöbəsi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Strateji planlaşdırma şöbəsi
+                  </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris şöbəsi </a>
@@ -743,7 +777,7 @@
                 </li>
               </div>
             </div>
-  
+
             <div class="navbar__burger-dropdown-item-container">
               <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
                 <p> DİGƏR STRUKTUR BÖLMƏLƏRİ </p>
@@ -771,323 +805,350 @@
             </div>
           </ul>
         </li>
-        <li  class="navbar__burger-menu-item">
+        <li class="navbar__burger-menu-item">
           <div class="navbar__burger-menu-item_header_item">
-            <a  class="navbar__burger-menu-item_header_item-color"  href="#">
+            <a class="navbar__burger-menu-item_header_item-color" href="#">
               Akademik fəaliyyət
-              </a>
-              <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
-         
+            </a>
+            <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
+
 
 
           </div>
           <div class="navbar__burger-dropdown-item-container">
-          <ul class="navbar__burger-dropdown">
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p>FAKÜLTƏLƏR</p> 
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-  
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+            <ul class="navbar__burger-dropdown">
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p>FAKÜLTƏLƏR</p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> 
-                    Su təsərrüfatı və mühəndis kommunikasiya sistemləri
-                    fakültəsi
-                  </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya texnologiyaları fakültəsi</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili dekanlığı</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı fakültəsi</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
-                </li>
+                <div class="navbar__burger-submenu-item_down_container">
+
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">
+                      Su təsərrüfatı və mühəndis kommunikasiya sistemləri
+                      fakültəsi
+                    </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad
+                      fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya
+                      texnologiyaları fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili
+                      dekanlığı</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların
+                      hazırlığı fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma
+                      fakültəsi</a>
+                  </li>
+                </div>
               </div>
-            </div>
-           
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p>TƏHSİL</p>
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-  
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p>TƏHSİL</p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
-                </li>
+                <div class="navbar__burger-submenu-item_down_container">
+
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu
+                    </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
+                  </li>
+                </div>
               </div>
-            </div>
-  
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p > TƏDRİS </p>
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p> TƏDRİS </p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
-                </li>
-                
+                <div class="navbar__burger-submenu-item_down_container">
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
+                  </li>
+
+                </div>
               </div>
-            </div>
-          </ul>
+            </ul>
         </li>
-        <li  class="navbar__burger-menu-item">
+        <li class="navbar__burger-menu-item">
           <div class="navbar__burger-menu-item_header_item">
-            <a  class="navbar__burger-menu-item_header_item-color"  href="#">
+            <a class="navbar__burger-menu-item_header_item-color" href="#">
               Elmi-tədqiqat
-              </a>
-              <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
-         
+            </a>
+            <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
+
 
 
           </div>
           <div class="navbar__burger-dropdown-item-container">
-          <ul class="navbar__burger-dropdown">
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p>
-                  Elmi-tədqiqat
-                  </p> 
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-  
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+            <ul class="navbar__burger-dropdown">
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p>
+                    Elmi-tədqiqat
+                  </p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> 
-                    Su təsərrüfatı və mühəndis kommunikasiya sistemləri
-                    fakültəsi
-                  </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya texnologiyaları fakültəsi</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili dekanlığı</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı fakültəsi</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
-                </li>
+                <div class="navbar__burger-submenu-item_down_container">
+
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">
+                      Su təsərrüfatı və mühəndis kommunikasiya sistemləri
+                      fakültəsi
+                    </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad
+                      fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya
+                      texnologiyaları fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili
+                      dekanlığı</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların
+                      hazırlığı fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma
+                      fakültəsi</a>
+                  </li>
+                </div>
               </div>
-            </div>
-           
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p>TƏHSİL</p>
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-  
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p>TƏHSİL</p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
-                </li>
+                <div class="navbar__burger-submenu-item_down_container">
+
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu
+                    </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
+                  </li>
+                </div>
               </div>
-            </div>
-  
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p > TƏDRİS </p>
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p> TƏDRİS </p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
-                </li>
-                
+                <div class="navbar__burger-submenu-item_down_container">
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
+                  </li>
+
+                </div>
               </div>
-            </div>
-          </ul>
+            </ul>
         </li>
-        <li  class="navbar__burger-menu-item">
+        <li class="navbar__burger-menu-item">
           <div class="navbar__burger-menu-item_header_item">
-            <a  class="navbar__burger-menu-item_header_item-color"  href="#">
+            <a class="navbar__burger-menu-item_header_item-color" href="#">
               Akademik fəaliyyət
-              </a>
-              <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
-         
+            </a>
+            <i class="fa-solid fa-angle-down angle-down  navbar__arrow-icon" aria-hidden="true"></i>
+
 
 
           </div>
           <div class="navbar__burger-dropdown-item-container">
-          <ul class="navbar__burger-dropdown">
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p>FAKÜLTƏLƏR</p> 
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-  
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+            <ul class="navbar__burger-dropdown">
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p>FAKÜLTƏLƏR</p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> 
-                    Su təsərrüfatı və mühəndis kommunikasiya sistemləri
-                    fakültəsi
-                  </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad fakültəsi</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya texnologiyaları fakültəsi</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili dekanlığı</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların hazırlığı fakültəsi</a>
-                </li> <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma fakültəsi</a>
-                </li>
+                <div class="navbar__burger-submenu-item_down_container">
+
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Memarlıq fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İnşaat fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">
+                      Su təsərrüfatı və mühəndis kommunikasiya sistemləri
+                      fakültəsi
+                    </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəqliyyat fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Dizayn fakültəsi </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tikinti-iqtisad
+                      fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mexanika və İnformasiya
+                      texnologiyaları fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin təhsili
+                      dekanlığı</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi vətəndaşların
+                      hazırlığı fakültəsi</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İxtisasartırma
+                      fakültəsi</a>
+                  </li>
+                </div>
               </div>
-            </div>
-           
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p>TƏHSİL</p>
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-  
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p>TƏHSİL</p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu </a>
-                </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
-                </li>
+                <div class="navbar__burger-submenu-item_down_container">
+
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Bakalavr</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Doktorantura</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əlavə təhsil </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Qəbul komissiyası</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Əcnəbi tələbələrin qəbulu
+                    </a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Mühasibatlıq </a>
+                  </li>
+                </div>
               </div>
-            </div>
-  
-            <div class="navbar__burger-dropdown-item-container">
-              <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p > TƏDRİS </p>
-                
-              </li>
-              <div class="navbar__burger-submenu-item_down_container">
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+
+              <div class="navbar__burger-dropdown-item-container">
+                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
+                  <p> TƏDRİS </p>
+
                 </li>
-                <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
-                </li>
-                
+                <div class="navbar__burger-submenu-item_down_container">
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris proqramları</a>
+                  </li>
+                  <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
+                    <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Akademik təqvim</a>
+                  </li>
+
+                </div>
               </div>
-            </div>
-          </ul>
+            </ul>
 
         </li>
         <li class="navbar__burger-menu-item">
           <div class="navbar__burger-menu-item_header_item">
             <a class="navbar__burger-menu-item_header_item-color" href="#">Universitet</a>
             <i class="fa-solid fa-angle-down angle-down navbar__arrow-icon" aria-hidden="true"></i>
-         
+
 
           </div>
           <ul class="navbar__burger-dropdown">
             <div class="navbar__burger-dropdown-item-container">
               <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
-                <p > UNIVERSITET</p>
+                <p> UNIVERSITET</p>
               </li>
               <div class="navbar__burger-submenu-item_down_container">
-  
+
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}">Haqqında</a>
                 </li>
@@ -1104,7 +1165,8 @@
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Məzunlar</a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Beynəlxalq reytinq bazaları </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Beynəlxalq reytinq bazaları
+                  </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Rəsmi sənədlər</a>
@@ -1116,9 +1178,10 @@
                 <p>MƏRKƏZLƏR</p>
               </li>
               <div class="navbar__burger-submenu-item_down_container">
-  
+
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Təcrübə və Karyera Mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Təcrübə və Karyera Mərkəzi
+                  </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İKT mərkəzi </a>
@@ -1130,16 +1193,19 @@
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Avicenna mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və monitorinq mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Keyfiyyət təminatı və
+                    monitorinq mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Dil mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Nəşriyyat və poliqrafiya
+                    mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və Marketinq mərkəzi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> İctimaiyyətlə Əlaqələr və
+                    Marketinq mərkəzi </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Magistratura mərkəzi </a>
@@ -1151,12 +1217,13 @@
                 <p>ŞÖBƏLƏR</p>
               </li>
               <div class="navbar__burger-submenu-item_down_container">
-  
+
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Xarici əlaqələr şöbəsi</a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
-                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Strateji planlaşdırma şöbəsi </a>
+                  <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Strateji planlaşdırma şöbəsi
+                  </a>
                 </li>
                 <li class="navbar__burger-submenu-item navbar__burger-submenu-item_down">
                   <a class="navbar__burger-submenu-item_down-white" href="{{ sub.link }}"> Tədris şöbəsi </a>
@@ -1175,7 +1242,7 @@
                 </li>
               </div>
             </div>
-  
+
             <div class="navbar__burger-dropdown-item-container">
               <li class="navbar__burger-submenu-item navbar__burger-submenu-item_head">
                 <p> DİGƏR STRUKTUR BÖLMƏLƏRİ </p>
@@ -1205,13 +1272,14 @@
         </li>
       </ul>
     </div>
-    </nav>
-   
-  
-    <script src="../../JS/Home/Home.js"></script>
-    <script src="../../JS/Home/NavBar.js"></script>
-    <script src="../../JS/Home/Mobile.js"></script>
+  </nav>
 
 
-  </body>
+  <script src="../../JS/Home/Home.js"></script>
+  <script src="../../JS/Home/NavBar.js"></script>
+  <script src="../../JS/Home/Mobile.js"></script>
+
+
+</body>
+
 </html>
