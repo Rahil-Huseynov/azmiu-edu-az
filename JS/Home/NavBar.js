@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const navBarArrow = document.querySelectorAll(".navbar__arrow-icon");
 
   const searchIcon = document.querySelector(".navbar__search_icon");
+  const searchIcon_container = document.querySelector(".navbar__search-icon-wrapper");
   const navbarWrapper = document.querySelector("#navbar__wrapper");
   const closeIconWrapper = document.querySelector(".navbar__search-close-icon-wrapper");
   const groupElement = document.querySelector(".group");
 
-  searchIcon.addEventListener("click", function () {
+  searchIcon_container.addEventListener("click", function () {
     searchIcon.style.display = "none";
     navbarWrapper.style.display = "none";
     closeIconWrapper.style.display = "flex";
