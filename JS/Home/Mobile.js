@@ -127,4 +127,45 @@ document.addEventListener("DOMContentLoaded", function () {
       closeIcon.style.display = "none";
     }
   });
+
+
+  const mobileItem = document.querySelector(".mobile-item_item");
+  const mobileDropdownNav = document.querySelector(".mobile-dropdown-nav");
+
+  mobileItem.addEventListener("click", () => {
+    const isOpen = mobileDropdownNav.classList.contains("active");
+
+    if (isOpen) {
+      mobileDropdownNav.style.maxHeight = "0";
+      mobileDropdownNav.style.opacity = "0";
+      setTimeout(() => {
+        mobileDropdownNav.classList.remove("active");
+        mobileDropdownNav.style.display = "none";
+      }, 300);
+    } else {
+      mobileDropdownNav.style.display = "grid";
+      setTimeout(() => {
+        mobileDropdownNav.classList.add("active");
+        mobileDropdownNav.style.maxHeight = "200px";
+        mobileDropdownNav.style.opacity = "1";
+      }, 10);
+    }
+  });
+
+  document.querySelectorAll(".mobile-dropdown-nav_items").forEach((item) => {
+    item.addEventListener("click", function () {
+      document.querySelectorAll(".mobile-dropdown-nav_items").forEach((el) => {
+        el.classList.remove("active");
+      });
+
+      this.classList.add("active");
+
+      mobileDropdownNav.style.maxHeight = "0";
+      mobileDropdownNav.style.opacity = "0";
+      setTimeout(() => {
+        mobileDropdownNav.classList.remove("active");
+        mobileDropdownNav.style.display = "none";
+      }, 300);
+    });
+  });  
 });

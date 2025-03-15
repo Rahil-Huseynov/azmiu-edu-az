@@ -290,3 +290,40 @@
 .group_mobile_container {
   display: flex;
 }
+
+.mobile-item {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.mobile-dropdown-nav {
+  display: none;
+  list-style: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.mobile-dropdown-nav.active {
+  display: grid;
+  gap: 20px;
+  opacity: 1;
+  max-height: 200px;
+}
+
+.mobile-dropdown-nav_items {
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-dropdown-nav_items.active {
+  background-color: darkblue;
+  color: white;
+}
