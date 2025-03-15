@@ -1,0 +1,100 @@
+.footer {
+  background-color: #232E3C;
+  height: 100%;
+}
+.footer_container {
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding-top: 2rem;
+}
+.footer_container_logo-container-logo {
+  width: 300px;
+}
+.footer_container_item_container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+.footer_container_item_container__link_item {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.footer_container_item_container__link_item_items {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+}
+.footer_container_item_container__link_item_items_header {
+  color: #F5A842;
+}
+.footer_container_item_container__link_item_items_url {
+  color: white;
+  transition: padding-left 0.3s ease-in-out;
+  text-decoration: none;
+}
+.footer_container_item_container__link_item_items_url:hover {
+  padding-left: 10px;
+}
+@media (max-width: 650px) {
+  .footer_container_item_container__link_item {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 3rem;
+  }
+}
+.footer_container_item_container_about {
+  display: grid;
+  gap: 16px;
+}
+.footer_container_item_container_about_location {
+  color: white;
+  background-color: #2E3B4C;
+  display: grid;
+  border: none;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  height: 200px;
+  width: 300px;
+  text-align: right;
+  padding: 30px;
+  gap: 20px;
+}
+.footer_container_item_container_about_sosial {
+  display: flex;
+  justify-content: space-around;
+}
+.footer_container_item_container_about_sosial-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  transition: background-color 0.3s ease-in-out;
+}
+.footer_container_item_container_about_sosial-item:hover {
+  background-color: #F5A842;
+}
+@media (max-width: 650px) {
+  .footer_container_item_container {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+  }
+}
+.footer_copyright_container {
+  display: flex;
+  background-color: #273241;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  color: white;
+}
+.footer_copyright_container_img {
+  width: 25px;
+}
