@@ -45,13 +45,19 @@
     padding: 8px 20px;
   }
   &__azmiu-logo {
-    img {
+    &-img {
       height: 60px;
     }
   }
   &__riba-logo {
-    img {
+    &-img {
       height: 35px;
     }
+  }
+}
+
+@media (max-width: 1050px) {
+  .header__inner {
+    display: none;
   }
 }

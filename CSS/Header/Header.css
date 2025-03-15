@@ -43,9 +43,15 @@
   align-items: center;
   padding: 8px 20px;
 }
-.header__azmiu-logo img {
+.header__azmiu-logo-img {
   height: 60px;
 }
-.header__riba-logo img {
+.header__riba-logo-img {
   height: 35px;
+}
+
+@media (max-width: 1050px) {
+  .header__inner {
+    display: none;
+  }
 }
