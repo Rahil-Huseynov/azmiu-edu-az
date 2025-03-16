@@ -3,6 +3,9 @@ a {
   text-decoration: none;
 }
 
+.navbar {
+  height: 50px;
+}
 .navbar__wrap-container {
   display: flex;
   justify-content: space-between;
@@ -37,6 +40,7 @@ a {
   width: 100%;
   gap: 1rem;
   height: auto;
+  z-index: 11;
   padding-top: 1rem;
   padding-bottom: 25px;
   font-family: sans-serif;
