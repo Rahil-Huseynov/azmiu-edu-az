@@ -1,7 +1,5 @@
 .section-pagination {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .section-pagination .pagination {
@@ -46,7 +44,7 @@
   height: 35.2px;
   font-size: 15px;
   font-weight: bold;
-  display: flex;
+  display: center;
   justify-content: center;
   align-items: center;
 }

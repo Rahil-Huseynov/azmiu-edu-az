@@ -46,7 +46,7 @@
             height: 35.2px;
             font-size: $font-size-medium;
             font-weight: bold;
-            @include flex-center;
+            @include flex-center(center, center, center, null);
         }
         .active {
             background: $color-background;

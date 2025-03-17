@@ -1,0 +1,92 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
+.common-news-section {
+    width: 100%;
+    padding: $section-padding;
+    background-color: $color-second-background;
+    @media (max-width: $breakpoint-xlarge) {
+        padding: $responsive-padding;
+    }
+    .container {
+        .block {
+            @include makeFlexForColum(30px);
+            width: 100%;
+            align-items: center;
+            .common-news-block {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                justify-content: center;
+                @media (max-width: $breakpoint-large) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                @media (max-width: $breakpoint-small) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                @media (max-width: $breakpoint-xsmall) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .square {
+                    @include makeFlexForColum();
+                    justify-content: space-between;
+                    width: 230px;
+                    height: 350px;
+                    background: $color-white;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        box-shadow:
+                            rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+                            rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+                            rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+                    }
+                    @media (max-width: $breakpoint-medium) {
+                        width: 180px;
+                        height: 300px;
+                    }
+                    @media (max-width: $breakpoint-xsmall) {
+                        width: 200px;
+                    }
+
+                    img {
+                        background-position: center;
+                        object-fit: fill;
+                        height: 150px;
+                        width: 230px;
+                        @media (max-width: $breakpoint-medium) {
+                            width: 180px;
+                        }
+                        @media (max-width: $breakpoint-xsmall) {
+                            width: 200px;
+                        }
+                    }
+                    p {
+                        padding: 0 $padding-xsmall;
+                        font-size: $font-size-small;
+                        color: $color-background;
+                        line-height: 18px;
+                    }
+
+                    .button {
+                        transition: 0.3s;
+                        background-color: $color-background;
+                        color: $color-white;
+                        padding: $padding-xsmall 18px;
+                        border-radius: 3px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: block;
+                        margin: 0 10px 10px 10px;
+                        font-size: $font-size-small;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
