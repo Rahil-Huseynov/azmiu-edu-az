@@ -20,19 +20,23 @@
             padding-top: 2rem;
 
             &__link_item {
-                display: flex;
-                justify-content: space-around;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
                 width: 100%;
 
                 &_items {
                     display: grid;
                     width: 250px;
+                    gap: 1rem;
+
 
                     &_header {
+                        font-size: 16px;
                         color: #F5A842;
                     }
 
                     &_url {
+                        font-size: 14px;
                         color: white;
                         transition: padding-left 0.3s ease-in-out;
                         text-decoration: none;
@@ -66,28 +70,34 @@
 
             @media (max-width: 650px) {
                 &__link_item {
-                    display: flex;
-                    justify-content: space-around;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
                     width: 100%;
-                    gap: 3rem;
+                    gap: 1rem;
                 }
             }
-
-            @media (max-width: 840px) {
+            @media (max-width: 1400px) {
                 &__link_item {
-                    display: flex;
-                    justify-content: space-around;
-                    width: 450px;
-                    gap: 3rem;
-                    padding-left: 1rem;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    width: 100%;
+                    gap: 1rem;
                 }
             }
 
+            @media (max-width: 1150px) {
+                &__link_item {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    width: 100%;
+                    gap: 1rem;
+                }
+            }
             @media (max-width: 480px) {
                 &__link_item {
                     width: 350px;
                     word-break: break-word;
-                    gap: 0rem;
+                    gap: 2rem;
                 }
             }
 
@@ -136,8 +146,9 @@
         @media (max-width: 785px) {
             &_item_container {
                 display: grid;
-                place-items: center;
                 gap: 2rem;
+                place-items: center;
+
             }
         }
     }

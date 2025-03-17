@@ -53,6 +53,8 @@
     transform: translateX(0);
     opacity: 1;
     right: 0;
+    position: relative;
+    z-index: 15;
   }
 
   &-close-btn {

@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto", // Eyni vaxtda görünən slayd sayı
+    slidesPerView: "auto",
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
-      depth: 200,
+      depth: 0,
       modifier: 1,
       slideShadows: true,
     },
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 1.1, // Aktiv slaydın 90%, digərlərinin 5% olması üçün
+        slidesPerView: 1.1, 
       },
     },
   });
