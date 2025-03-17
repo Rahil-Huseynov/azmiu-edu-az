@@ -47,7 +47,7 @@
 }
 @media (max-width: 480px) {
   .footer_container_item_container__link_item_items {
-    width: 180px;
+    width: 160px;
     word-break: break-word;
   }
 }
