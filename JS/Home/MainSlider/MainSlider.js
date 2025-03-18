@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
       slideShadows: true,
     },
     loop: true,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: true,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

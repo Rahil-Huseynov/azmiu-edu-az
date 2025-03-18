@@ -308,7 +308,7 @@
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
 .mobile-dropdown-nav.active {
@@ -319,7 +319,7 @@
 }
 
 .mobile-dropdown-nav_items {
-  border: 1px solid red;
+  border: 1px solid #E18A17;
   border-radius: 20px;
   padding: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;

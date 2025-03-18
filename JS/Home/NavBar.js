@@ -3,14 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const navBarArrowParent = document.querySelectorAll(".navbar__menu-item_header_item");
   const navBarArrow = document.querySelectorAll(".navbar__arrow-icon");
 
-  const searchIcon = document.querySelector(".navbar__search_icon");
   const searchIcon_container = document.querySelector(".navbar__search-icon-wrapper");
   const navbarWrapper = document.querySelector("#navbar__wrapper");
   const closeIconWrapper = document.querySelector(".navbar__search-close-icon-wrapper");
   const groupElement = document.querySelector(".group");
 
   searchIcon_container.addEventListener("click", function () {
-    searchIcon.style.display = "none";
+    searchIcon_container.style.display = "none";
     navbarWrapper.style.display = "none";
     closeIconWrapper.style.display = "flex";
 
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   closeIconWrapper.addEventListener("click", function () {
-    searchIcon.style.display = "flex";
+    searchIcon_container.style.display = "flex";
     navbarWrapper.style.display = "flex";
     closeIconWrapper.style.display = "none";
     groupElement.classList.remove("open");

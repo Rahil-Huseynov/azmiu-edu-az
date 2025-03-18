@@ -5,11 +5,12 @@ a {
 
 .navbar {
   height: 50px;
+
   &__wrap-container {
     display: flex;
     justify-content: space-between;
     background-color: #0c4384;
-    padding: 0 20px;
+    padding: 0 70px;
     width: 100%;
   }
 
@@ -51,8 +52,7 @@ a {
     padding-left: 25px;
 
     left: 0;
-    background-image: linear-gradient(
-        112.5deg,
+    background-image: linear-gradient(112.5deg,
         rgba(232, 232, 232, 0.03) 0%,
         rgba(232, 232, 232, 0.03) 2%,
         rgba(231, 231, 231, 0.03) 2%,
@@ -64,10 +64,8 @@ a {
         rgba(231, 231, 231, 0.03) 67%,
         rgba(231, 231, 231, 0.03) 90%,
         rgba(111, 111, 111, 0.03) 90%,
-        rgba(111, 111, 111, 0.03) 100%
-      ),
-      linear-gradient(
-        157.5deg,
+        rgba(111, 111, 111, 0.03) 100%),
+      linear-gradient(157.5deg,
         rgba(210, 210, 210, 0.03) 0%,
         rgba(210, 210, 210, 0.03) 17%,
         rgba(254, 254, 254, 0.03) 17%,
@@ -79,10 +77,8 @@ a {
         rgba(24, 24, 24, 0.03) 70%,
         rgba(24, 24, 24, 0.03) 82%,
         rgba(16, 16, 16, 0.03) 82%,
-        rgba(16, 16, 16, 0.03) 100%
-      ),
-      linear-gradient(
-        22.5deg,
+        rgba(16, 16, 16, 0.03) 100%),
+      linear-gradient(22.5deg,
         rgba(47, 47, 47, 0.03) 0%,
         rgba(47, 47, 47, 0.03) 32%,
         rgba(124, 124, 124, 0.03) 32%,
@@ -94,12 +90,12 @@ a {
         rgba(243, 243, 243, 0.03) 64%,
         rgba(243, 243, 243, 0.03) 94%,
         rgba(93, 93, 93, 0.03) 94%,
-        rgba(93, 93, 93, 0.03) 100%
-      ),
+        rgba(93, 93, 93, 0.03) 100%),
       linear-gradient(90deg, #ffffff, #ffffff);
   }
 
   &__submenu-item_down {
+
     &:hover,
     :active {
       transition: 0.4s;
@@ -207,6 +203,15 @@ a {
   transform: translateY(0);
   max-height: 100%;
   animation: open 1s forwards;
+}
+
+.navbar__search_icon {
+  display: flex;
+  padding-right: 1rem;
+}
+.navbar__search_close_icon{
+  display: flex;
+  padding-right: 1rem;
 }
 
 .navbar__dropdown-closing {

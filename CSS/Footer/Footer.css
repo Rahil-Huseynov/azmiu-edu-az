@@ -5,16 +5,28 @@
 .footer_container {
   padding-bottom: 2rem;
   margin: 0 auto;
-  max-width: 1180px;
-  padding-top: 2rem;
+  padding: 34px 70px 24px 70px;
+}
+.footer_container_logo-container {
+  padding-top: 1rem;
 }
 .footer_container_logo-container-logo {
   width: 300px;
+}
+@media (max-width: 480px) {
+  .footer_container_logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  .footer_container_logo-container-logo {
+    width: 300px;
+  }
 }
 .footer_container_item_container {
   display: flex;
   justify-content: space-around;
   padding-top: 2rem;
+  padding-left: 20px;
 }
 .footer_container_item_container__link_item {
   display: grid;
@@ -27,7 +39,7 @@
   gap: 1rem;
 }
 .footer_container_item_container__link_item_items_header {
-  font-size: 16px;
+  font-size: 14px;
   color: #F5A842;
 }
 .footer_container_item_container__link_item_items_url {
@@ -35,6 +47,7 @@
   color: white;
   transition: padding-left 0.3s ease-in-out;
   text-decoration: none;
+  padding-left: 10px;
 }
 .footer_container_item_container__link_item_items_url:hover {
   padding-left: 10px;
@@ -47,7 +60,7 @@
 }
 @media (max-width: 480px) {
   .footer_container_item_container__link_item_items {
-    width: 160px;
+    width: 140px;
     word-break: break-word;
   }
 }
@@ -82,7 +95,7 @@
 }
 @media (max-width: 480px) {
   .footer_container_item_container__link_item {
-    width: 350px;
+    width: 330px;
     word-break: break-word;
     gap: 2rem;
   }
@@ -100,7 +113,7 @@
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
   height: 200px;
-  width: 300px;
+  width: 240px;
   text-align: right;
   padding: 30px;
   gap: 20px;
@@ -127,6 +140,12 @@
     display: grid;
     gap: 2rem;
     place-items: center;
+    padding-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .footer_container {
+    padding: 0;
   }
 }
 .footer_copyright_container {
@@ -135,14 +154,17 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height: 50px;
+  height: 40px;
   color: white;
+  font-size: 13px;
 }
 .footer_copyright_container_img {
   width: 25px;
+  margin-bottom: 6px;
 }
 @media (max-width: 400px) {
   .footer_copyright_container {
-    gap: 0rem;
+    gap: 9px;
+    font-size: 13px;
   }
 }
