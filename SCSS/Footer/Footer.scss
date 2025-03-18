@@ -56,8 +56,9 @@
                     }
 
                     &_url:hover {
-                        padding-left: 10px;
+                        padding-left: 20px;
                     }
+
                     @media (max-width: 480px) {
                         &_url {
                             width: 150px;
@@ -193,6 +194,11 @@
         &_copyright_container {
             gap: 9px;
             font-size: 13px;
+        }
+    }
+    @media (max-width: 705px) {
+        &_copyright_container {
+            margin-top: 1rem;
         }
     }
 

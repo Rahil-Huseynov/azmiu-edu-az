@@ -95,6 +95,9 @@ a {
 .navbar__menu-item_header_item-color {
   color: white;
 }
+.navbar__menu-item_header_item:hover .navbar__menu-item_header_item-color {
+  color: #F5A842;
+}
 .navbar__search-icon-wrapper {
   display: flex;
   align-items: center;
@@ -145,12 +148,49 @@ a {
 
 .navbar__search_icon {
   display: flex;
+  width: 40px;
+  height: 40px;
   padding-right: 1rem;
+}
+
+.navbar__search_icon:hover {
+  cursor: pointer;
+}
+
+.navbar__search_icon_orange {
+  display: none;
+}
+
+.navbar__search-icon-wrapper:hover .navbar__search_icon_orange {
+  display: block;
+}
+
+.navbar__search-icon-wrapper:hover .navbar__search_icon_white {
+  display: none;
 }
 
 .navbar__search_close_icon {
   display: flex;
   padding-right: 1rem;
+  width: 40px;
+  height: 40px;
+  margin-left: 1rem;
+}
+
+.navbar__search_close_icon_orange {
+  display: none;
+}
+
+.navbar__search_close_icon_white {
+  display: block;
+}
+
+.navbar__search-close-icon-wrapper:hover .navbar__search_close_icon_orange {
+  display: block;
+}
+
+.navbar__search-close-icon-wrapper:hover .navbar__search_close_icon_white {
+  display: none;
 }
 
 .navbar__dropdown-closing {

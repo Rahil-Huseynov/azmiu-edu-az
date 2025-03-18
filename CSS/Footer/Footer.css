@@ -50,7 +50,7 @@
   padding-left: 10px;
 }
 .footer_container_item_container__link_item_items_url:hover {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 @media (max-width: 480px) {
   .footer_container_item_container__link_item_items_url {
@@ -166,5 +166,10 @@
   .footer_copyright_container {
     gap: 9px;
     font-size: 13px;
+  }
+}
+@media (max-width: 705px) {
+  .footer_copyright_container {
+    margin-top: 1rem;
   }
 }

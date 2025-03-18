@@ -40,6 +40,10 @@
   color: white !important;
   font-weight: bold;
 }
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: #F5A842 !important;
+}
 
 .swiper-slide-active {
   border: 1px solid white;
