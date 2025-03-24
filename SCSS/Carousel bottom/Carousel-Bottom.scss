@@ -1,0 +1,26 @@
+.carousel_bottom_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+    padding: 20px 70px;
+    text-align: center;
+
+    &_item {
+        display: grid;
+        place-items: center;
+        width: 170px;
+        padding: 16px;
+        border-radius: 10px;
+        background-color: #e4e4e4a8;
+
+        &_img {
+            width: 40px;
+        }
+
+        &_description {
+            font-size: 8px;
+            text-transform: uppercase;
+            word-break: word-break;
+        }
+    }
+}
