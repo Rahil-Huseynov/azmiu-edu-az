@@ -9,15 +9,34 @@
   display: grid;
   place-items: center;
   width: 170px;
-  padding: 16px;
-  border-radius: 10px;
-  background-color: rgba(228, 228, 228, 0.6588235294);
 }
 .carousel_bottom_container_item_img {
   width: 40px;
 }
 .carousel_bottom_container_item_description {
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   word-break: word-break;
+}
+
+@media (max-width: 1080px) {
+  .carousel_bottom_container {
+    padding: 20px 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+@media (max-width: 590px) {
+  .carousel_bottom_container {
+    padding: 20px 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .carousel_bottom_container {
+    padding: 20px 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
