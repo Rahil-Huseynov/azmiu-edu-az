@@ -1,0 +1,26 @@
+.carousel-logo {
+  padding: 20px 70px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.swiper-logo {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.swiper-slide-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-slide-logo img {
+  display: block;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}

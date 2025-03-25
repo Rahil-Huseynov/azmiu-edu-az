@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
+  var swiper2 = new Swiper(".carousel-2 .swiper-2", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".carousel-2 .swiper-button-next-2",
+      prevEl: ".carousel-2 .swiper-button-prev-2",
     },
     breakpoints: {
       768: {

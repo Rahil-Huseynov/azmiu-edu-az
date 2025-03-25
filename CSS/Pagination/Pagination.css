@@ -1,57 +1,23 @@
-.section-pagination {
-  display: flex;
-  flex-direction: column;
-}
-.section-pagination .pagination {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #ddd;
-  padding: 2px;
-  border-radius: 8px;
-  backdrop-filter: blur(5px);
-}
-.section-pagination .pagination button {
-  background: none;
-  border: none;
-  color: #154384;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.section-pagination .pagination button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.section-pagination .pagination button:not(:disabled):hover {
-  background: rgb(55, 84, 110);
-  color: white;
-}
-.section-pagination .pagination .page-numbers {
-  display: flex;
-  gap: 3.2px;
-  align-items: center;
-}
-.section-pagination .pagination .page-numbers i {
-  color: #154384;
-}
-.section-pagination .pagination .page-number {
-  width: 35.2px;
-  height: 35.2px;
-  font-size: 15px;
-  font-weight: bold;
-  display: flex;
-}
-.section-pagination .pagination .active {
-  background: #154384;
-  color: white;
-  box-shadow: 0 0 12px rgba(38, 76, 106, 0.3);
-}
-.section-pagination .pagination .dots {
-  color: rgba(255, 255, 255, 0.5);
-  cursor: default;
+/* Error: This variable is available from multiple global modules.
+ *     ,
+ * 1   | @use '../variables' as *;
+ *     | ======================== includes variable
+ * ... |
+ * 3   | @use '../mixin' as *;
+ *     | ==================== includes variable
+ * ... |
+ * 47  |             font-size: $font-size-medium;
+ *     |                        ^^^^^^^^^^^^^^^^^ variable use
+ *     '
+ *   scss\Pagination\Pagination.scss 47:24  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: This variable is available from multiple global modules.\a     \2577 \a 1   \2502  @use '../variables' as *;\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  includes variable\a... \2502 \a 3   \2502  @use '../mixin' as *;\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  includes variable\a... \2502 \a 47  \2502              font-size: $font-size-medium;\d\a     \2502                         ^^^^^^^^^^^^^^^^^ variable use\a     \2575 \a   scss\\Pagination\\Pagination.scss 47:24  root stylesheet";
 }

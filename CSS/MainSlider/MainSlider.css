@@ -1,15 +1,15 @@
-.swiper-container {
+.carousel-2 {
   width: 100%;
   height: auto;
   position: relative;
 }
 
-.swiper {
+.swiper-2 {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
+.swiper-slide-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,14 +18,14 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: auto;
+.swiper-slide-2 img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-next-2,
+.swiper-button-prev-2 {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   padding: 25px;
@@ -34,25 +34,25 @@
   height: 30px;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.swiper-button-next-2::after,
+.swiper-button-prev-2::after {
   font-size: 20px !important;
   color: white !important;
   font-weight: bold;
 }
 
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
+.swiper-button-next-2:hover::after,
+.swiper-button-prev-2:hover::after {
   color: #F5A842 !important;
 }
 
-.swiper-slide-active {
+.swiper-slide-2-active {
   border: 1px solid white;
 }
 
 @media (max-width: 768px) {
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper-button-next-2,
+  .swiper-button-prev-2 {
     display: none !important;
   }
 }
