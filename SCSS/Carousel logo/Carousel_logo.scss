@@ -12,7 +12,7 @@
 }
 
 .swiper-slide-logo {
-    display: flex;
+    display: grid !important;
     justify-content: center;
     align-items: center;
     overflow: hidden;
