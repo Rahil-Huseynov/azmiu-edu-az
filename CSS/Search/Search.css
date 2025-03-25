@@ -1,23 +1,143 @@
-/* Error: This variable is available from multiple global modules.
- *     ,
- * 1   | @use "../variables" as *;
- *     | ======================== includes variable
- * ... |
- * 3   | @use "../mixin" as *;
- *     | ==================== includes variable
- * ... |
- * 10  |   @media (max-width: $breakpoint-xlarge) {
- *     |                      ^^^^^^^^^^^^^^^^^^ variable use
- *     '
- *   scss\Search\Search.scss 10:22  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: This variable is available from multiple global modules.\a     \2577 \a 1   \2502  @use "../variables" as *;\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  includes variable\a... \2502 \a 3   \2502  @use "../mixin" as *;\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  includes variable\a... \2502 \a 10  \2502    @media (max-width: $breakpoint-xlarge) {\d\a     \2502                       ^^^^^^^^^^^^^^^^^^ variable use\a     \2575 \a   scss\\Search\\Search.scss 10:22  root stylesheet';
+.search-section {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+}
+@media (max-width: 1200px) {
+  .search-section {
+    padding: 60px 20px;
+  }
+}
+.search-section .container .search-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.search-section .container .search-block .search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 3px;
+}
+.search-section .container .search-block .search .find-title {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 300;
+}
+.search-section .container .search-block .search .find {
+  color: #154384;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+}
+.search-section .container .search-block .result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+@media (max-width: 992px) {
+  .search-section .container .search-block .result {
+    padding: 10px;
+  }
+}
+.search-section .container .search-block .result .result-block {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px 10px 10px 40px;
+  box-shadow: 4px 4px 9.6px rgba(0, 0, 0, 0.05), 0 8px 18px rgba(75, 0, 0, 0.05);
+  counter-increment: gradient-counter;
+  position: relative;
+}
+.search-section .container .search-block .result .result-block::before, .search-section .container .search-block .result .result-block::after {
+  background-color: #154384;
+  border-radius: 16px 16px 0 16px;
+  content: "";
+  height: 41.6px;
+  left: -16px;
+  overflow: hidden;
+  position: absolute;
+  top: -16px;
+  width: 41.6px;
+}
+.search-section .container .search-block .result .result-block::before {
+  box-shadow: 4px 4px 9.6px rgba(0, 0, 0, 0.05), 0 8px 18px rgba(75, 0, 0, 0.05);
+  align-items: center;
+  justify-content: center;
+  content: attr(data-number);
+  color: white;
+  display: flex;
+  font: 300 15px/1 sans-serif;
+  z-index: 1;
+}
+.search-section .container .search-block .result .result-block a {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+.search-section .container .search-block .result .result-block a:hover .title-link {
+  transform: translateX(10px);
+}
+.search-section .container .search-block .result .result-block a .title-link {
+  color: #154384;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+@media (max-width: 992px) {
+  .search-section .container .search-block .result .result-block a .title-link {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .search-section .container .search-block .result .result-block a .title-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .search-section .container .search-block .result .result-block a .title-link {
+    font-size: 15px;
+  }
+}
+.search-section .container .search-block .result .result-block .info {
+  font-size: 15px;
+  font-weight: 300;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .search-section .container .search-block .result .result-block .info {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .search-section .container .search-block .result .result-block .info {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.search-section .container .search-block .result .result-block .date {
+  color: #2c3e50;
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .search-section .container .search-block .result .result-block .date {
+    font-size: 10px;
+  }
 }

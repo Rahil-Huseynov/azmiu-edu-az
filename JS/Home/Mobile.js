@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const navBarMobile = document.querySelector(".navbar__mobile");
   const navBarMobileBurgerBtn = document.querySelector(".navbar__mobile-burger-btn-icon");
 
+  const disableScroll = () => {
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+  };
+
+  const enableScroll = () => {
+    document.body.style.overflow = "auto";
+    document.documentElement.style.overflow = "auto";
+  };
+
   navBarMobileBurgerBtn.addEventListener("click", () => {
     const isDropdownActive = navBarMobileDropdown.classList.contains("navbar__mobile-dropdown-active");
 
@@ -17,11 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
       navBarMobile.style.width = "100%";
       navBarMobileLogo.style.display = "block";
       navBarMobileBurgerBtn.style.display = "block";
+
+      disableScroll();
     } else {
       navBarMobile.style.display = "none";
       navBarMobile.style.width = "300px";
       navBarMobileLogo.style.display = "none";
       navBarMobileBurgerBtn.style.display = "none";
+
+      disableScroll();
     }
   });
 
@@ -37,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
       navBarMobile.style.width = "100%";
       navBarMobileLogo.style.display = "block";
       navBarMobileBurgerBtn.style.display = "block";
+
+      enableScroll();
     }
   });
 
@@ -128,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
   const mobileItem = document.querySelector(".mobile-item_item");
   const mobileDropdownNav = document.querySelector(".mobile-dropdown-nav");
 
@@ -167,5 +182,5 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileDropdownNav.style.display = "none";
       }, 300);
     });
-  });  
+  });
 });
