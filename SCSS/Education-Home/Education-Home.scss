@@ -1,0 +1,94 @@
+@use '../variables' as *;
+@use '../map' as *;
+@use '../mixin' as *;
+
+.education {
+    width: 100%;
+    @include flex-center;
+    padding: 20px 70px;
+    
+    @media (max-width: 1200px) {
+        padding: $mobile-padding;
+    }
+    
+    .container-education {
+        .edd-content {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            width: 100%;
+
+            @media (max-width: 1200px) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            @media (max-width: 630px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: $breakpoint-xsmall) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .edd-block {
+                border-radius: 10px;
+                position: relative;
+                width: 180px;
+                @include makeFlexForColum;
+                text-align: center;
+                background-color: #ec8600;
+                cursor: pointer;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    .underline {
+                        transition: 0.2s;
+                        background-color: $dark-blue;
+                    }
+
+                    background-color: $dark-blue;
+
+                }
+
+                .underline {
+                    position: absolute;
+                    transition: background-color 0.3s ease;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    width: 100%;
+                    bottom: -5px;
+                    left: 0;
+                    height: 5px;
+                    background-color: #ec8600;
+                }
+
+                .img {
+                    margin: auto 0;
+                    padding: 30px;
+                }
+
+                .edd-text {
+                    width: 100%;
+                    background-color: white;
+
+                    p {
+                        padding: 7px;
+                        font-family: $base-font;
+                        text-transform: capitalize;
+                        color: $dark-blue;
+                        font-weight: bold;
+
+                        @media (max-width: $breakpoint-xlarge) {
+                            font-size: $font-size-xsmall;
+                        }
+
+                        @media (max-width: $breakpoint-large) {
+                            font-size: $font-size-medium;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.education {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 70px;
+}
+@media (max-width: 1200px) {
+  .education {
+    padding: 60px 20px;
+  }
+}
+.education .container-education .edd-content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .education .container-education .edd-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 630px) {
+  .education .container-education .edd-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 460px) {
+  .education .container-education .edd-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.education .container-education .edd-content .edd-block {
+  border-radius: 10px;
+  position: relative;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ec8600;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.education .container-education .edd-content .edd-block:hover {
+  background-color: rgb(12, 67, 132);
+}
+.education .container-education .edd-content .edd-block:hover .underline {
+  transition: 0.2s;
+  background-color: rgb(12, 67, 132);
+}
+.education .container-education .edd-content .edd-block .underline {
+  position: absolute;
+  transition: background-color 0.3s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  height: 5px;
+  background-color: #ec8600;
+}
+.education .container-education .edd-content .edd-block .img {
+  margin: auto 0;
+  padding: 30px;
+}
+.education .container-education .edd-content .edd-block .edd-text {
+  width: 100%;
+  background-color: white;
+}
+.education .container-education .edd-content .edd-block .edd-text p {
+  padding: 7px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color: rgb(12, 67, 132);
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .education .container-education .edd-content .edd-block .edd-text p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .education .container-education .edd-content .edd-block .edd-text p {
+    font-size: 15px;
+  }
+}
