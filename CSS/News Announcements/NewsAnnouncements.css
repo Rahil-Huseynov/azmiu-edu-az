@@ -61,6 +61,7 @@
 .news-carousel-slide {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr);
+  place-items: center;
   gap: 70px;
   flex-wrap: wrap;
   padding: 10px;
@@ -144,6 +145,7 @@
 .announcements-carousel-slide {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr);
+  place-items: center;
   gap: 70px;
   flex-wrap: wrap;
   padding: 10px;
@@ -239,7 +241,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: 20px 70px;
+  padding: 50px 70px;
   cursor: pointer;
 }
 
@@ -316,5 +318,9 @@
   }
   .news_announcements {
     width: 350px;
+  }
+  .announcements-carousel-slide {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
