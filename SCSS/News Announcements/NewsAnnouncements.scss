@@ -1,24 +1,27 @@
 .news_announcements {
-  width: 100%;
+  max-width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 70px;
+
   &-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
+
   &-label {
     display: flex;
     font-size: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
+    justify-content: center;
     margin-bottom: 30px;
     cursor: pointer;
     color: #204178;
     text-transform: uppercase;
+
     &-content {
       width: 412.5px;
       text-align: center;
@@ -28,13 +31,15 @@
       }
     }
   }
+
   &-announcements-carousel {
     display: none;
   }
 }
+
 // News Carousel
 .news-carousel {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: white;
@@ -46,17 +51,20 @@
   width: 100%;
   height: 100%;
 }
+
 .news-carousel-all-news {
   color: #1c4385;
   font-weight: bold;
   display: inline-block;
   padding: 20px 10px;
   cursor: pointer;
+
   &:hover,
   :active {
     text-decoration: underline;
   }
 }
+
 .news-carousel-slide {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr);
@@ -82,6 +90,7 @@
 .news-carousel-caption {
   display: flex;
   height: 100%;
+  gap: 2rem;
   flex-direction: column;
   justify-content: space-around;
   font-size: 14px;
@@ -91,6 +100,7 @@
 .news-carousel-caption-content {
   font-size: 15px;
   cursor: pointer;
+
   &:hover,
   :active {
     color: #f3901b;
@@ -115,7 +125,7 @@
 
 // Announcements Carousel
 .announcements-carousel {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: white;
@@ -127,17 +137,20 @@
   width: 100%;
   height: 100%;
 }
+
 .announcements-carousel-all-announcements {
   color: #1c4385;
   font-weight: bold;
   display: inline-block;
   padding: 20px 10px;
   cursor: pointer;
+
   &:hover,
   :active {
     text-decoration: underline;
   }
 }
+
 .announcements-carousel-slide {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr);
@@ -163,6 +176,7 @@
 .announcements-carousel-caption {
   display: flex;
   height: 100%;
+  gap: 2rem;
   flex-direction: column;
   justify-content: space-around;
   font-size: 14px;
@@ -172,6 +186,7 @@
 .announcements-carousel-caption-content {
   font-size: 15px;
   cursor: pointer;
+
   &:hover,
   :active {
     color: #f3901b;
@@ -198,6 +213,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     display: none;
     opacity: 0;
@@ -208,26 +224,134 @@
   0% {
     opacity: 1;
   }
+
   100% {
     display: none;
     opacity: 0;
   }
 }
+
 @keyframes news-carousel-open {
   0% {
     display: block;
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes announcements-carousel-open {
   0% {
     display: block;
     opacity: 0;
   }
+
   100% {
     opacity: 1;
+  }
+}
+
+.news_announcements_block_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 20px 70px;
+  cursor: pointer;
+}
+
+.news_announcements_block {
+  width: 250px;
+}
+
+
+.carousel-container_block {
+  width: 100%;
+}
+
+.swiper-slide_block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.swiper-pagination_block {
+  position: relative !important;
+  bottom: 0px !important;
+
+
+}
+
+.swiper-pagination-bullet_block {
+  background-color: #000;
+  opacity: 0.7;
+  position: relative;
+  bottom: -30px;
+}
+
+.swiper-pagination-bullet_block-active {
+  background-color: #ff5733;
+}
+
+@media (max-width: 1291px) {
+  .news_announcements_block_section {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .news_announcements_block_section {
+    gap: 1rem;
+
+  }
+
+  .news_announcements {
+    max-width: 680px;
+  }
+}
+
+
+@media (max-width: 1099px) {
+  .news_announcements_block_section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+  }
+
+  .news_announcements {
+    max-width: 610px;
+  }
+}
+
+@media (max-width: 780px) {
+  .news_announcements_block_section {
+    gap: 1rem;
+
+  }
+
+  .news_announcements {
+    max-width: 541px;
+  }
+}
+
+@media (max-width: 919px) {
+
+  .news_announcements_block {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .news-carousel-slide {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .news_announcements {
+    width: 350px;
   }
 }

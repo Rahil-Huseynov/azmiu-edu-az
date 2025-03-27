@@ -12,6 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
   });
+  const block_swiper = new Swiper(".swiper_block", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination_block",
+      clickable: true,
+    },
+  });
+
   const announcementsSwiper = new Swiper(".announcements-carousel-swiper", {
     slidesPerView: 1,
     spaceBetween: 10,
