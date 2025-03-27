@@ -1,0 +1,234 @@
+.news_announcements {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 70px;
+}
+.news_announcements-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.news_announcements-label {
+  display: flex;
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  cursor: pointer;
+  color: #204178;
+  text-transform: uppercase;
+}
+.news_announcements-label-content {
+  width: 412.5px;
+  text-align: center;
+}
+.news_announcements-label-content-right-border {
+  border-right: 1px solid #204178;
+}
+.news_announcements-announcements-carousel {
+  display: none;
+}
+
+.news-carousel {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.news-carousel-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.news-carousel-all-news {
+  color: #1c4385;
+  font-weight: bold;
+  display: inline-block;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+.news-carousel-all-news:hover,
+.news-carousel-all-news :active {
+  text-decoration: underline;
+}
+
+.news-carousel-slide {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.news-carousel-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.news-carousel-item img {
+  width: 110px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.news-carousel-caption {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #333;
+}
+
+.news-carousel-caption-content {
+  font-size: 15px;
+  cursor: pointer;
+}
+.news-carousel-caption-content:hover,
+.news-carousel-caption-content :active {
+  color: #f3901b;
+  text-decoration: underline;
+}
+
+.news-carousel-date {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.news-carousel-pagination-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.news-carousel-swiper-pagination {
+  position: static !important;
+}
+
+.announcements-carousel {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.announcements-carousel-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.announcements-carousel-all-announcements {
+  color: #1c4385;
+  font-weight: bold;
+  display: inline-block;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+.announcements-carousel-all-announcements:hover,
+.announcements-carousel-all-announcements :active {
+  text-decoration: underline;
+}
+
+.announcements-carousel-slide {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.announcements-carousel-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.announcements-carousel-item img {
+  width: 110px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.announcements-carousel-caption {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #333;
+}
+
+.announcements-carousel-caption-content {
+  font-size: 15px;
+  cursor: pointer;
+}
+.announcements-carousel-caption-content:hover,
+.announcements-carousel-caption-content :active {
+  color: #f3901b;
+  text-decoration: underline;
+}
+
+.announcements-carousel-date {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.announcements-carousel-pagination-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.announcements-carousel-swiper-pagination {
+  position: static !important;
+}
+
+@keyframes news-carousel-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes announcements-carousel-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes news-carousel-open {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes announcements-carousel-open {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
