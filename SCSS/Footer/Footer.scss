@@ -1,3 +1,8 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
+
 .footer {
     background-color: #232E3C;
     height: 100%;

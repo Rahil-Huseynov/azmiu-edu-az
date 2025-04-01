@@ -1,3 +1,7 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
 .carousel-logo {
     padding: 20px 70px;
     width: 100%;

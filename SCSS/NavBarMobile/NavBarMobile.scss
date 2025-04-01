@@ -1,3 +1,7 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
 .navbar__mobile {
   overflow: auto;
   height: 50px;

@@ -1,3 +1,7 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
 a {
   color: initial;
   text-decoration: none;
