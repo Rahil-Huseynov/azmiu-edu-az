@@ -135,7 +135,7 @@
 .footer_container_item_container_about_sosial-item:hover {
   background-color: #F5A842;
 }
-@media (max-width: 785px) {
+@media (max-width: 870px) {
   .footer_container_item_container {
     display: grid;
     gap: 2rem;

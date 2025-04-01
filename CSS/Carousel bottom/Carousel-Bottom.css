@@ -12,10 +12,10 @@
   width: 200px;
 }
 .carousel_bottom_container_item_img {
-  width: 40px;
+  width: 61px;
 }
 .carousel_bottom_container_item_description {
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   font-weight: 800;
   text-transform: uppercase;
@@ -25,14 +25,33 @@
 @media (max-width: 1080px) {
   .carousel_bottom_container {
     display: grid;
+    place-items: center;
     padding: 20px 0;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+  .carousel_bottom_container_item {
+    display: grid;
+    place-items: center;
+    width: 200px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+  .carousel_bottom_container_item_img {
+    width: 40px;
+  }
+  .carousel_bottom_container_item_description {
+    font-size: 12px;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    word-break: word-break;
   }
 }
 @media (max-width: 590px) {
   .carousel_bottom_container {
     display: grid;
+    place-items: center;
     padding: 20px 0;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -41,6 +60,7 @@
 @media (max-width: 400px) {
   .carousel_bottom_container {
     display: grid;
+    place-items: center;
     padding: 20px 0;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
