@@ -26,10 +26,11 @@
                     grid-template-columns: repeat(2, 1fr);
                 }
                 @media (max-width: $breakpoint-xsmall) {
-                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                 }
                 .square {
                     @include makeFlexForColum();
+                    padding: 10px;
                     justify-content: space-between;
                     width: 230px;
                     height: 350px;
@@ -43,34 +44,34 @@
                             rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
                     }
                     @media (max-width: $breakpoint-medium) {
-                        width: 180px;
-                        height: 300px;
+                        width: auto;
+                        height: auto;
                     }
-                    @media (max-width: $breakpoint-xsmall) {
-                        width: 200px;
-                    }
-
                     img {
                         background-position: center;
-                        object-fit: fill;
-                        height: 150px;
-                        width: 230px;
+                        object-fit: contain;
+                        height: 200px;
                         @media (max-width: $breakpoint-medium) {
-                            width: 180px;
+                            height: 180px;
                         }
                         @media (max-width: $breakpoint-xsmall) {
-                            width: 200px;
+                            height: 180px;
                         }
                     }
                     p {
-                        padding: 0 $padding-xsmall;
                         font-size: $font-size-small;
                         color: $color-background;
                         line-height: 18px;
                     }
+                    .date{
+                        text-align: right;
+                        font-size: 10px;
+                        color: rgb(145, 135, 135);
+                    }
 
                     .button {
                         transition: 0.3s;
+                        margin-top: 15px;
                         background-color: $color-background;
                         color: $color-white;
                         padding: $padding-xsmall 18px;
@@ -78,7 +79,6 @@
                         text-align: center;
                         text-decoration: none;
                         display: block;
-                        margin: 0 10px 10px 10px;
                         font-size: $font-size-small;
                         cursor: pointer;
                         &:hover {

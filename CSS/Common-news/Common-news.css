@@ -33,12 +33,13 @@
 }
 @media (max-width: 460px) {
   .common-news-section .container .block .common-news-block {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .common-news-section .container .block .common-news-block .square {
   display: flex;
   flex-direction: column;
+  padding: 10px;
   justify-content: space-between;
   width: 230px;
   height: 350px;
@@ -51,39 +52,38 @@
 }
 @media (max-width: 768px) {
   .common-news-section .container .block .common-news-block .square {
-    width: 180px;
-    height: 300px;
-  }
-}
-@media (max-width: 460px) {
-  .common-news-section .container .block .common-news-block .square {
-    width: 200px;
+    width: auto;
+    height: auto;
   }
 }
 .common-news-section .container .block .common-news-block .square img {
   background-position: center;
-  object-fit: fill;
-  height: 150px;
-  width: 230px;
+  object-fit: contain;
+  height: 200px;
 }
 @media (max-width: 768px) {
   .common-news-section .container .block .common-news-block .square img {
-    width: 180px;
+    height: 180px;
   }
 }
 @media (max-width: 460px) {
   .common-news-section .container .block .common-news-block .square img {
-    width: 200px;
+    height: 180px;
   }
 }
 .common-news-section .container .block .common-news-block .square p {
-  padding: 0 10px;
   font-size: 12px;
   color: #154384;
   line-height: 18px;
 }
+.common-news-section .container .block .common-news-block .square .date {
+  text-align: right;
+  font-size: 10px;
+  color: rgb(145, 135, 135);
+}
 .common-news-section .container .block .common-news-block .square .button {
   transition: 0.3s;
+  margin-top: 15px;
   background-color: #154384;
   color: white;
   padding: 10px 18px;
@@ -91,7 +91,6 @@
   text-align: center;
   text-decoration: none;
   display: block;
-  margin: 0 10px 10px 10px;
   font-size: 12px;
   cursor: pointer;
 }
