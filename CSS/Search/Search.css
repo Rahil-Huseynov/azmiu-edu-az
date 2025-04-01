@@ -1,9 +1,9 @@
 .search-section {
   width: 100%;
+  min-height: 100vh;
   padding: 60px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: #eeeeee;
 }
 @media (max-width: 1200px) {

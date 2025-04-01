@@ -4,8 +4,10 @@
 
 .search-section {
   width: 100%;
+  min-height: 100vh;
   padding: $section-padding;
-  @include flex-center;
+  display: flex;
+  justify-content: center;
   background-color: $color-second-background;
   @media (max-width: $breakpoint-xlarge) {
     padding: $responsive-padding;
