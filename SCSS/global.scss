@@ -1,27 +1,33 @@
-@use '../SCSS/variables' as *;
-@use '../SCSS/map' as *;
-@use '../SCSS/mixin' as *;
+@use "../SCSS/variables" as *;
+@use "../SCSS/map" as *;
+@use "../SCSS/mixin" as *;
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: $background-color;
+  font-family: sans-serif;
+  background-color: $background-color;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .active-blue {
-    background-color: #154384 !important;
-    color: white !important;
+  background-color: #154384 !important;
+  color: white !important;
 }
