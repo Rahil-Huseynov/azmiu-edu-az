@@ -1,22 +1,438 @@
-/* Error: Only 0 arguments allowed, but 4 were passed.
- *    ,--> scss\About\About.scss
- * 37 |                         @include flex-center(flex, center, center, null );
- *    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
- *    '
- *    ,--> scss\_mixin.scss
- * 70 | @mixin flex-center {
- *    |        =========== declaration
- *    '
- *   scss\About\About.scss 37:25  flex-center()
- *   scss\About\About.scss 37:25  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Only 0 arguments allowed, but 4 were passed.\a    \250c \2500 \2500 > scss\\About\\About.scss\a 37 \2502                          @include flex-center(flex, center, center, null );\d\a    \2502                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > scss\\_mixin.scss\a 70 \2502  @mixin flex-center {\d\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   scss\\About\\About.scss 37:25  flex-center()\a   scss\\About\\About.scss 37:25  root stylesheet";
+@charset "UTF-8";
+.about-section {
+  background-color: #eeeeee;
+  width: 100%;
+  padding: 60px 0;
+}
+@media (max-width: 1200px) {
+  .about-section {
+    padding: 60px 20px;
+  }
+}
+.about-section .container .about-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-section .container .about-block .title {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: black;
+}
+.about-section .container .about-block .road {
+  height: 100%;
+}
+.about-section .container .about-block .road .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+.about-section .container .about-block .road .breadcrumb .breadcrumb__item {
+  transform: skew(-8deg);
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  margin: 1px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.about-section .container .about-block .road .breadcrumb .breadcrumb__item:hover {
+  background: #154384;
+  color: #fff;
+}
+.about-section .container .about-block .road .breadcrumb .breadcrumb__item .breadcrumb__title {
+  transform: skew(8deg);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.about-section .container .about-block .liner {
+  width: 100%;
+  height: 2px;
+  background-color: #f1aa61;
+}
+.about-section .container .about-block .about-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .about-section .container .about-block .about-bottom {
+    flex-direction: column;
+  }
+}
+.about-section .container .about-block .about-bottom .information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+.about-section .container .about-block .about-bottom .information .info-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about-section .container .about-block .about-bottom .information .info-link a {
+  padding: 5px;
+  border: 1px solid #eeeeee;
+  background-color: #ddd;
+  width: 100%;
+  color: #154384;
+}
+.about-section .container .about-block .about-bottom .information .info-link a p {
+  color: #154384;
+}
+.about-section .container .about-block .about-bottom .information .info-link a:hover p {
+  transition: 0.3s;
+  transform: translateX(10px);
+}
+.about-section .container .about-block .about-bottom .information .leadership {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+.about-section .container .about-block .about-bottom .information .leadership > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .container .about-block .about-bottom .information .leadership > div:first-of-type img {
+  border: 2px solid #154384;
+  padding: 3px;
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.about-section .container .about-block .about-bottom .information .leadership > div:nth-of-type(n + 2) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .about-section .container .about-block .about-bottom .information .leadership > div:nth-of-type(n + 2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .leadership > div:nth-of-type(n + 2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.about-section .container .about-block .about-bottom .information .leadership > div:nth-of-type(n + 2) img {
+  border: 2px solid #154384;
+  padding: 3px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.about-section .container .about-block .about-bottom .information .leadership div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .container .about-block .about-bottom .information .leadership div a:hover {
+  text-decoration: underline;
+  text-decoration-color: #154384;
+}
+.about-section .container .about-block .about-bottom .information .leadership div a > p:first-of-type {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #154384;
+  text-align: center;
+}
+.about-section .container .about-block .about-bottom .information .leadership div a > p:nth-of-type(n + 2) {
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-size: 15px;
+  color: #154384;
+  text-align: center;
+}
+.about-section .container .about-block .about-bottom .information .rating {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-section .container .about-block .about-bottom .information .rating div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .rating div {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .rating div img {
+  height: 60px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .rating div img {
+    height: 45px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .rating div p {
+  font-size: 15px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .rating div p {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .history {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.about-section .container .about-block .about-bottom .information .history div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-section .container .about-block .about-bottom .information .history div h4 {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  border-bottom: 5px solid rgb(159, 155, 155);
+  background-color: #ddd;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .history div h4 {
+    font-size: 15px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .history div p {
+  color: #154384;
+  font-weight: 300;
+  font-size: 15px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .history div p {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .history div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-section .container .about-block .about-bottom .information .history div ul li {
+  font-size: 15px;
+  font-weight: 300;
+  list-style: disc;
+  margin-left: 14px;
+  color: #154384;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .history div ul li {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .journal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.about-section .container .about-block .about-bottom .information .journal img {
+  height: 250px;
+  border: 2px solid #154384;
+  padding: 5px;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:first-of-type div {
+  display: flex;
+  align-items: center;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:first-of-type div > span:first-of-type {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .journal > div:first-of-type div > span:first-of-type {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .journal > div:first-of-type div > span:first-of-type a {
+  font-weight: 300;
+  color: #154384;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:first-of-type div > span:first-of-type a:hover {
+  text-decoration: underline;
+  -moz-text-decoration-color: #154384;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:first-of-type div > span:nth-of-type(n + 2) {
+  font-weight: 300;
+  font-size: 15px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .journal > div:first-of-type div > span:nth-of-type(n + 2) {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) h4 {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) h4 {
+    font-size: 15px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) p {
+  font-size: 15px;
+  font-weight: 300;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) p {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) span {
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) span {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) span a {
+  font-weight: 300;
+  color: #154384;
+  font-style: normal;
+}
+.about-section .container .about-block .about-bottom .information .journal > div:nth-of-type(n + 2) span a:hover {
+  text-decoration: underline;
+  -moz-text-decoration-color: #154384;
+}
+.about-section .container .about-block .about-bottom .information table {
+  width: 70%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.about-section .container .about-block .about-bottom .information table th,
+.about-section .container .about-block .about-bottom .information table td {
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 8px;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .information table th,
+  .about-section .container .about-block .about-bottom .information table td {
+    font-size: 12px;
+  }
+}
+.about-section .container .about-block .about-bottom .information table th {
+  background-color: #eeeeee;
+}
+.about-section .container .about-block .about-bottom .menu {
+  position: sticky;
+  top: 10px;
+  height: 100%;
+  background-color: #154384;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-section .container .about-block .about-bottom .menu .menu-header {
+  background-color: #154384;
+  color: #f1aa61;
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+}
+.about-section .container .about-block .about-bottom .menu ul {
+  list-style-type: none;
+}
+.about-section .container .about-block .about-bottom .menu ul > li:hover {
+  color: #f1aa61;
+}
+.about-section .container .about-block .about-bottom .menu li {
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 460px) {
+  .about-section .container .about-block .about-bottom .menu li {
+    font-size: 15px;
+  }
+}
+.about-section .container .about-block .about-bottom .menu li:not(.submenu)::before {
+  content: "• ";
+}
+.about-section .container .about-block .about-bottom .menu .submenu {
+  position: relative;
+}
+.about-section .container .about-block .about-bottom .menu .submenu::before {
+  content: "› ";
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.about-section .container .about-block .about-bottom .menu .submenu .submenu-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  border-radius: 5px;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.about-section .container .about-block .about-bottom .menu .submenu .submenu-container li {
+  font-size: 14px;
+  padding: 5px 0 5px 10px;
+  border-top: none;
+}
+.about-section .container .about-block .about-bottom .menu .submenu.active::before {
+  transition: 0.2s;
+  transform: rotate(90deg);
+}
+.about-section .container .about-block .about-bottom .menu .submenu.active .submenu-container {
+  opacity: 1;
+  max-height: var(--dynamic-height);
 }

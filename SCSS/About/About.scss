@@ -34,7 +34,10 @@
                         border-radius: 3px;
                         transition: all 0.3s ease;
                         text-transform: uppercase;
-                        @include flex-center(flex, center, center, null );
+                        // @include flex-center(flex, center, center, null );
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         font-size: $font-size-xsmall;
                         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
                         margin: 1px;
@@ -62,7 +65,10 @@
             }
             .about-bottom {
                 width: 100%;
-                @include flex-center(flex, space-between, null, 20px);
+                // @include flex-center(flex, space-between, null, 20px);
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
                 @media (max-width: $breakpoint-medium) {
                     flex-direction: column;
                 }
@@ -154,7 +160,11 @@
                     .rating {
                         @include makeFlexForColum(15px);
                         div {
-                            @include flex-center(flex, null, center, 10px);
+                            // @include flex-center(flex, null, center, 10px);
+                            display: flex;
+                            align-items: center;
+                            // justify-content: center;
+                            gap: 10px;
                             width: 100%;
                             @media (max-width: $breakpoint-xsmall) {
                                 flex-direction: column;
@@ -226,7 +236,10 @@
                             @include makeFlexForColum(5px);
                             width: 100%;
                             div {
-                                @include flex-center(flex, null, center, null);
+                                // @include flex-center(flex, null, center, null);
+                                display: flex;
+                                align-items: center;
+                                // justify-content: center;
                                 > span:first-of-type {
                                     text-transform: capitalize;
                                     font-weight: bold;
