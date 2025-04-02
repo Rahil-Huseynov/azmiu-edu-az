@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   place-items: center;
-  padding: 20px 70px;
+  padding: 30px 70px;
 }
 .dov-link_container-item-img {
   filter: grayscale(100%);

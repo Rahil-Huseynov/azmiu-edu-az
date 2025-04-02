@@ -1,14 +1,14 @@
 /* Error: Only 0 arguments allowed, but 4 were passed.
- *    ,--> scss\About\About.scss
+ *    ,--> SCSS/About/About.scss
  * 37 |                         @include flex-center(flex, center, center, null);
  *    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
  *    '
- *    ,--> scss\_mixin.scss
+ *    ,--> SCSS/_mixin.scss
  * 70 | @mixin flex-center {
  *    |        =========== declaration
  *    '
- *   scss\About\About.scss 37:25  flex-center()
- *   scss\About\About.scss 37:25  root stylesheet */
+ *   SCSS/About/About.scss 37:25  flex-center()
+ *   SCSS/About/About.scss 37:25  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -18,5 +18,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Only 0 arguments allowed, but 4 were passed.\a    \250c \2500 \2500 > scss\\About\\About.scss\a 37 \2502                          @include flex-center(flex, center, center, null);\d\a    \2502                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > scss\\_mixin.scss\a 70 \2502  @mixin flex-center {\d\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   scss\\About\\About.scss 37:25  flex-center()\a   scss\\About\\About.scss 37:25  root stylesheet";
+  content: "Error: Only 0 arguments allowed, but 4 were passed.\a    \250c \2500 \2500 > SCSS/About/About.scss\a 37 \2502                          @include flex-center(flex, center, center, null);\a    \2502                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > SCSS/_mixin.scss\a 70 \2502  @mixin flex-center {\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   SCSS/About/About.scss 37:25  flex-center()\a   SCSS/About/About.scss 37:25  root stylesheet";
 }

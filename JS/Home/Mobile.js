@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navBarMobileLogo = document.querySelector(".navbar__mobile-logo");
   const navBarMobile = document.querySelector(".navbar__mobile");
   const navBarMobileBurgerBtn = document.querySelector(".navbar__mobile-burger-btn-icon");
+  const navbar = document.querySelector(".navbar");
 
   const disableScroll = () => {
     document.body.style.overflow = "hidden";
@@ -14,6 +15,27 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "auto";
     document.documentElement.style.overflow = "auto";
   };
+
+  document.addEventListener("click", (event) => {
+    const isDropdownActive = navBarMobileDropdown.classList.contains("navbar__mobile-dropdown-active");
+
+    const isClickInsideNav = navBarMobile.contains(event.target) || navBarMobileBurgerBtn.contains(event.target) || navBarMobileDropdown.contains(event.target);
+
+    if (isDropdownActive && !isClickInsideNav) {
+      navBarMobileDropdown.classList.remove("navbar__mobile-dropdown-active");
+      navBarCloseBtn.classList.remove("navbar__mobile-close-btn-active");
+      navBarMobileBurgerBtn.classList.remove("burger-active");
+
+      navBarMobile.style.display = "block";
+      navBarMobile.style.width = "100%";
+      navBarMobileLogo.style.display = "block";
+      navBarMobileBurgerBtn.style.display = "block";
+      navbar.style.background = '#0c4384';
+
+      enableScroll();
+    }
+  });
+
 
   navBarMobileBurgerBtn.addEventListener("click", () => {
     const isDropdownActive = navBarMobileDropdown.classList.contains("navbar__mobile-dropdown-active");
@@ -27,13 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
       navBarMobile.style.width = "100%";
       navBarMobileLogo.style.display = "block";
       navBarMobileBurgerBtn.style.display = "block";
-
+      navbar.style.background = '#0c4384'
       disableScroll();
     } else {
       navBarMobile.style.display = "none";
       navBarMobile.style.width = "300px";
       navBarMobileLogo.style.display = "none";
       navBarMobileBurgerBtn.style.display = "none";
+      navbar.style.background = '#0c4384'
 
       disableScroll();
     }
@@ -120,14 +143,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   searchIcon.addEventListener("click", () => {
     searchWrapper.classList.add("open");
-    searchIcon.style.display = "none"; 
-    closeIcon.style.display = "flex"; 
+    searchIcon.style.display = "none";
+    closeIcon.style.display = "flex";
   });
 
   closeIcon.addEventListener("click", () => {
     searchWrapper.classList.remove("open");
-    searchIcon.style.display = "flex"; 
-    closeIcon.style.display = "none"; 
+    searchIcon.style.display = "flex";
+    closeIcon.style.display = "none";
   });
 
   inputField.addEventListener("focus", () => {
