@@ -92,6 +92,8 @@
   padding: 8px 20px;
   font-family: sans-serif;
   gap: 50px;
+  max-height: 100vh;
+  overflow: scroll;
 }
 .navbar__burger-wrap-container {
   display: flex;
@@ -319,7 +321,7 @@
 }
 
 .mobile-dropdown-nav_items {
-  border: 1px solid #e18a17;
+  border: 1px solid #E18A17;
   border-radius: 20px;
   padding: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;

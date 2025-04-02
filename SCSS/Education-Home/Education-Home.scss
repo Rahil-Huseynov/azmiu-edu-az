@@ -28,10 +28,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            @media (max-width: $breakpoint-xsmall) {
-                grid-template-columns: repeat(1, 1fr);
-            }
-
             .edd-block {
                 border-radius: 5px;
                 position: relative;
@@ -87,6 +83,12 @@
                     }
                 }
             }
+            @media (max-width: 500px) {
+                .edd-block {
+                    width: 157px;
+                }
+            }
+
         }
     }
 }

@@ -18,6 +18,7 @@
   .dov-link_container {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    padding: 20px 50px;
   }
 }
 @media (max-width: 540px) {

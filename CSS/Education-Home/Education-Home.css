@@ -29,11 +29,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 460px) {
-  .education .container-education .edd-content {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 .education .container-education .edd-content .edd-block {
   border-radius: 5px;
   position: relative;
@@ -82,5 +77,10 @@
 @media (max-width: 992px) {
   .education .container-education .edd-content .edd-block .edd-text p {
     font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .education .container-education .edd-content .edd-block {
+    width: 157px;
   }
 }
