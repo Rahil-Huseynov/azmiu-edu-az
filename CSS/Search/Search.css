@@ -15,6 +15,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-height: 100%;
+  justify-content: space-between;
 }
 .search-section .container .search-block .search {
   display: flex;
