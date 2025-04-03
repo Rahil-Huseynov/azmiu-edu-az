@@ -3,23 +3,26 @@
 @use "../mixin" as *;
 
 .carousel_bottom_container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    place-items: center;
-    padding: 20px 70px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 70px;
     text-align: center;
+    background-color: #ec8600;
 
     &_item {
         display: grid;
         place-items: center;
-        width: 170px;
+        width: 200px;
 
         &_img {
-            width: 40px;
+            width: 55px;
         }
 
         &_description {
             font-size: 12px;
+            color: white;
+            font-weight: 800;
             text-transform: uppercase;
             word-break: word-break;
         }
@@ -28,27 +31,107 @@
 
 @media (max-width:1080px) {
     .carousel_bottom_container {
-        padding: 20px 0;
+        display: grid;
+        place-items: center;
+        padding: 15px 0;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+
+        &_item {
+            display: grid;
+            place-items: center;
+            width: 170px;
+            padding-left: 30px;
+            padding-right: 40px;
+
+            &_img {
+                width: 40px;
+            }
+
+            &_description {
+                font-size: 12px;
+                color: white;
+                font-weight: 800;
+                text-transform: uppercase;
+                word-break: word-break;
+            }
+        }
+    }
+
+    @media (max-width:1080px) {
+        .carousel_bottom_container {
+            display: grid;
+            place-items: center;
+            padding: 15px 0;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            &_item {
+                display: grid;
+                place-items: center;
+                width: 170px;
+                padding-left: 30px;
+                padding-right: 40px;
+
+                &_img {
+                    width: 40px;
+                }
+
+                &_description {
+                    font-size: 12px;
+                    color: white;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    word-break: word-break;
+                }
+            }
+        }
 
     }
 }
 
+@media (max-width:500px) {
+    .carousel_bottom_container {
+        gap: 0;
+        row-gap: 1rem;
+        column-gap: 2rem;
+
+        &_item {
+            &_img {
+                width: 30px;
+            }
+
+            &_description {
+                font-size: 9px;
+                color: white;
+                font-weight: 800;
+                text-transform: uppercase;
+                word-break: word-break;
+            }
+        }
+    }
+
+}
+
 @media (max-width:590px) {
     .carousel_bottom_container {
-        padding: 20px 0;
+        display: grid;
+        place-items: center;
+        padding: 15px 0;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-
+        gap: 0;
+        row-gap: 1rem;
+        column-gap: 2rem;
     }
 }
 
 
 @media (max-width:400px) {
     .carousel_bottom_container {
-        padding: 20px 0;
-        grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        place-items: center;
+        padding: 15px 0;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
 
     }

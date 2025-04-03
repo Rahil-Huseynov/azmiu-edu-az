@@ -45,6 +45,7 @@
   color: white !important;
   font-weight: bold;
 }
+
 .swiper-button-next-main-slider:hover::after,
 .swiper-button-prev-main-slider:hover::after {
   color: #F5A842 !important;
@@ -69,7 +70,7 @@
   background-color: #1c4385d8;
   transform: translateX(-50%);
   width: 90%;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   min-height: 40px;
   word-break: break-word;
@@ -79,19 +80,23 @@
   font-weight: 500;
   z-index: 10;
 }
+
 @media (max-width: 905px) {
-  .main_slide_title  {
-  font-size: 12px;
+  .main_slide_title {
+    font-size: 12px;
   }
 }
+
 @media (max-width: 630px) {
-  .main_slide_title  {
-  font-size: 10px;
+  .main_slide_title {
+    font-size: 9px;
+    font-weight: 700;
   }
 }
 
 @media (max-width: 480px) {
-  .main_slide_title  {
-  font-size: 8px;
+  .main_slide_title {
+    font-size: 9px;
+    font-weight: 700;
   }
 }

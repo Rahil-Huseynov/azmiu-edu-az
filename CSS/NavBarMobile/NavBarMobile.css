@@ -53,6 +53,8 @@
   right: 0;
   position: relative;
   z-index: 15;
+  max-height: 100vh;
+  overflow: scroll;
 }
 .navbar__mobile-close-btn {
   display: none;

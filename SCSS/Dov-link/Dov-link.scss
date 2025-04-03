@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     place-items: center;
-    padding: 20px 70px;
+    padding: 30px 70px;
 
     &-item {
         &-img {
@@ -27,6 +27,8 @@
     .dov-link_container {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+        padding: 20px 50px;
+
     }
 }
 @media (max-width: 540px) {
