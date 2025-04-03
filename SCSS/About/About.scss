@@ -11,6 +11,7 @@
         padding: $responsive-padding;
     }
     .container {
+        @include container;
         .about-block {
             width: 100%;
             @include makeFlexForColum(20px);
