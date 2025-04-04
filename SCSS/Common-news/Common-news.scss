@@ -15,6 +15,41 @@
             @include makeFlexForColum(20px);
             align-items: center;
             width: 100%;
+            .road {
+                width: 100%;
+                .breadcrumb {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: auto;
+                    text-align: center;
+                    width: 100%;
+                    .breadcrumb__item {
+                        transform: skew(-8deg);
+                        background-color: $color-white;
+                        border-radius: 3px;
+                        transition: all 0.3s ease;
+                        text-transform: uppercase;
+                        @include flex-center(flex, center, center, null);
+                        font-size: $font-size-xsmall;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+                        margin: 1px;
+                        padding: $padding-xxsmall $padding-xsmall;
+                        cursor: pointer;
+                        &:hover {
+                            background: $color-background;
+                            color: #fff;
+                        }
+
+                        .breadcrumb__title {
+                            transform: skew(8deg);
+                            font-size: $font-size-xsmall;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
             .news-block {
                 display: flex;
                 width: 100%;
@@ -29,6 +64,7 @@
                     transform: scale(1.02);
                     transition: 0.5s;
                 }
+              
                 .news-title {
                     display: flex;
                     flex-direction: column;
