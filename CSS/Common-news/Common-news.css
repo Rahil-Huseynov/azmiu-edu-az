@@ -2,6 +2,7 @@
   width: 100%;
   padding: 60px 0;
   background-color: #eeeeee;
+  min-height: 100vh;
 }
 @media (max-width: 1200px) {
   .common-news-section {

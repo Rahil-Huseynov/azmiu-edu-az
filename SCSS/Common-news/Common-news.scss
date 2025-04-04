@@ -6,6 +6,7 @@
     width: 100%;
     padding: $section-padding;
     background-color: $color-second-background;
+    min-height: 100vh;
     @media (max-width: $breakpoint-xlarge) {
         padding: $responsive-padding;
     }
