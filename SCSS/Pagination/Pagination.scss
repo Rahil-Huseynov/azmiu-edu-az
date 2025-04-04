@@ -4,7 +4,6 @@
 
 .section-pagination {
     @include flex-center;
-    flex-direction: column;
     .pagination {
         display: flex;
         align-items: center;
@@ -46,7 +45,7 @@
             height: 35.2px;
             font-size: $font-size-medium;
             font-weight: bold;
-            @include flex-center(center, center, center, null);
+            @include flex-center;
         }
         .active {
             background: $color-background;

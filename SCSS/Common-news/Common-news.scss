@@ -30,7 +30,7 @@
                         border-radius: 3px;
                         transition: all 0.3s ease;
                         text-transform: uppercase;
-                        @include flex-center(flex, center, center, null);
+                        @include flex-center;
                         font-size: $font-size-xsmall;
                         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
                         margin: 1px;
