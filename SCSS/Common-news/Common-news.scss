@@ -1,0 +1,126 @@
+@use "../variables" as *;
+@use "../map" as *;
+@use "../mixin" as *;
+
+.common-news-section {
+    width: 100%;
+    padding: $section-padding;
+    background-color: $color-second-background;
+    min-height: 100vh;
+    @media (max-width: $breakpoint-xlarge) {
+        padding: $responsive-padding;
+    }
+    .container {
+        @include container();
+        .common-news-block {
+            @include makeFlexForColum(20px);
+            align-items: center;
+            width: 100%;
+            .road {
+                width: 100%;
+                .breadcrumb {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: auto;
+                    text-align: center;
+                    width: 100%;
+                    .breadcrumb__item {
+                        transform: skew(-8deg);
+                        background-color: $color-white;
+                        border-radius: 3px;
+                        transition: all 0.3s ease;
+                        text-transform: uppercase;
+                        @include flex-center(flex, center, center, null);
+                        font-size: $font-size-xsmall;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+                        margin: 1px;
+                        padding: $padding-xxsmall $padding-xsmall;
+                        cursor: pointer;
+                        &:hover {
+                            background: $color-background;
+                            color: #fff;
+                        }
+
+                        .breadcrumb__title {
+                            transform: skew(8deg);
+                            font-size: $font-size-xsmall;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .news-block {
+                display: flex;
+                width: 100%;
+                gap: 20px;
+                border: 1px solid $color-orange;
+                padding: $padding-xsmall;
+                border-right: none;
+                border-left: none;
+                &:hover {
+                    cursor: pointer;
+                    border-radius: $border-radius-xsmall;
+                    transform: scale(1.02);
+                    transition: 0.5s;
+                }
+              
+                .news-title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    width: 100%;
+                    @media (max-width: $breakpoint-medium) {
+                        gap: 10px;
+                    }
+                    h5 {
+                        font-size: $font-size-custom;
+                        color: $color-black;
+
+                        @media (max-width: $breakpoint-medium) {
+                            font-size: 17px;
+                        }
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: $font-size-medium;
+                        }
+                    }
+                    p {
+                        max-height: 100px;
+                        font-family: $base-font;
+                        font-size: $font-size-medium;
+                        color: #555;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                        @media (max-width: $breakpoint-medium) {
+                            -webkit-line-clamp: 3;
+                        }
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: $font-size-small;
+                        }
+                    }
+                    .date {
+                        font-size: $font-size-xsmall;
+                        color: #555;
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: 8px;
+                        }
+                    }
+                }
+
+                .img-block {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 150px;
+                        width: 200px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

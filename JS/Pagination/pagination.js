@@ -1,4 +1,4 @@
-const itemsPerPage = 7;
+const itemsPerPage = 8;
 let currentPage = 1;
 
 document.addEventListener("DOMContentLoaded", () => {

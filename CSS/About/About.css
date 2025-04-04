@@ -25,9 +25,6 @@
   text-transform: capitalize;
   color: black;
 }
-.about-section .container .about-block .road {
-  height: 100%;
-}
 .about-section .container .about-block .road .breadcrumb {
   display: flex;
   flex-wrap: wrap;
