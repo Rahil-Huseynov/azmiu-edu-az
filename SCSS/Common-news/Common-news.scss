@@ -10,80 +10,77 @@
         padding: $responsive-padding;
     }
     .container {
-        .block {
-            @include makeFlexForColum(30px);
-            width: 100%;
+        @include container();
+        .common-news-block {
+            @include makeFlexForColum(20px);
             align-items: center;
-            .common-news-block {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            .news-block {
+                display: flex;
+                width: 100%;
                 gap: 20px;
-                justify-content: center;
-                @media (max-width: $breakpoint-large) {
-                    grid-template-columns: repeat(3, 1fr);
+                border: 1px solid $color-orange;
+                padding: $padding-xsmall;
+                border-right: none;
+                border-left: none;
+                &:hover {
+                    cursor: pointer;
+                    border-radius: $border-radius-xsmall;
+                    transform: scale(1.02);
+                    transition: 0.5s;
                 }
-                @media (max-width: $breakpoint-small) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                @media (max-width: $breakpoint-xsmall) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                .square {
-                    @include makeFlexForColum();
-                    padding: 10px;
-                    justify-content: space-between;
-                    width: 230px;
-                    height: 350px;
-                    background: $color-white;
-                    border-radius: 4px;
-                    transition: all 0.3s ease;
-                    &:hover {
-                        box-shadow:
-                            rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-                            rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-                            rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-                    }
+                .news-title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    width: 100%;
                     @media (max-width: $breakpoint-medium) {
-                        width: auto;
-                        height: auto;
+                        gap: 10px;
                     }
-                    img {
-                        background-position: center;
-                        object-fit: contain;
-                        height: 200px;
+                    h5 {
+                        font-size: $font-size-custom;
+                        color: $color-black;
+
                         @media (max-width: $breakpoint-medium) {
-                            height: 180px;
+                            font-size: 17px;
                         }
                         @media (max-width: $breakpoint-xsmall) {
-                            height: 180px;
+                            font-size: $font-size-medium;
                         }
                     }
                     p {
-                        font-size: $font-size-small;
-                        color: $color-background;
-                        line-height: 18px;
-                    }
-                    .date{
-                        text-align: right;
-                        font-size: 10px;
-                        color: rgb(145, 135, 135);
-                    }
-
-                    .button {
-                        transition: 0.3s;
-                        margin-top: 15px;
-                        background-color: $color-background;
-                        color: $color-white;
-                        padding: $padding-xsmall 18px;
-                        border-radius: 3px;
-                        text-align: center;
-                        text-decoration: none;
-                        display: block;
-                        font-size: $font-size-small;
-                        cursor: pointer;
-                        &:hover {
-                            transform: scale(1.05);
+                        max-height: 100px;
+                        font-family: $base-font;
+                        font-size: $font-size-medium;
+                        color: #555;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                        @media (max-width: $breakpoint-medium) {
+                            -webkit-line-clamp: 3;
                         }
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: $font-size-small;
+                        }
+                    }
+                    .date {
+                        font-size: $font-size-xsmall;
+                        color: #555;
+                        @media (max-width: $breakpoint-xsmall) {
+                            font-size: 8px;
+                        }
+                    }
+                }
+
+                .img-block {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 150px;
+                        width: 200px;
+                        object-fit: cover;
                     }
                 }
             }
