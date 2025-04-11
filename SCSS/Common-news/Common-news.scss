@@ -59,13 +59,16 @@
                 padding: $padding-xsmall;
                 border-right: none;
                 border-left: none;
+
+                @media (max-width: 412px) {
+                    flex-direction: column;
+                }
                 &:hover {
                     cursor: pointer;
                     border-radius: $border-radius-xsmall;
                     transform: scale(1.02);
                     transition: 0.5s;
                 }
-              
                 .news-title {
                     display: flex;
                     flex-direction: column;

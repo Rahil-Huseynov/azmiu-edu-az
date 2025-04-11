@@ -65,6 +65,11 @@
   border-right: none;
   border-left: none;
 }
+@media (max-width: 412px) {
+  .common-news-section .container .common-news-block .news-block {
+    flex-direction: column;
+  }
+}
 .common-news-section .container .common-news-block .news-block:hover {
   cursor: pointer;
   border-radius: 10px;
