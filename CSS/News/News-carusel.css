@@ -1,6 +1,6 @@
 .news-carousel {
   width: 100%;
-  background: black;
+  background: #EEEEEE;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +13,12 @@
   align-items: center;
   position: relative;
   flex-direction: column;
-  width: 90%;
+  width: 1180px;
   margin: 0 auto;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
 }
 .news-carousel .carousel-container .carousel {
   overflow: hidden;
@@ -58,7 +62,7 @@
 }
 .news-carousel .carousel-container .play {
   font-size: 20px;
-  right: 0;
+  right: 40px;
   bottom: 80px;
 }
 .news-carousel .carousel-container .prev,
@@ -129,5 +133,5 @@
 }
 .news-carousel .carousel-container .thumbnails-wrapper .thumb-track .thumb:hover,
 .news-carousel .carousel-container .thumbnails-wrapper .thumb-track .thumb.active {
-  border-color: white;
+  border-color: black;
 }

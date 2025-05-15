@@ -79,7 +79,7 @@ function startAutoplay() {
     mainImage.src = thumbs[index].src;
     updateActiveThumbnail();
   }, 3000);
-  playButton.textContent = '⏸';
+  playButton.innerHTML = `<i class="fa-solid fa-pause"></i>`;
 }
 
 
@@ -89,7 +89,7 @@ playButton.addEventListener('click', () => {
     clearInterval(timerInterval);
     timer.textContent = '';
     autoplayInterval = null;
-    playButton.textContent = '▶';
+    playButton.innerHTML = `<i class="fa-solid fa-play">`;
   } else {
     startAutoplay();
   }
@@ -131,23 +131,23 @@ function updateActiveThumbnail() {
   }
 }
 
-fullscreenButton.addEventListener('click', () => {
-  if (!isFullscreen) {
-    newscarousel.requestFullscreen().then(() => {
-      mainImage.style.width = "900px";
-      mainImage.style.height = "700px";
-      carousel.style.height="auto";
-    });
-    fullscreenButton.textContent = '⛶';
-  } else {
-    document.exitFullscreen();
-    mainImage.style.width = "";
-    mainImage.style.height = "";
-    carousel.style.height="";
-    fullscreenButton.textContent = '⛶';
-  }
-  isFullscreen = !isFullscreen;
-});
+// fullscreenButton.addEventListener('click', () => {
+//   if (!isFullscreen) {
+//     newscarousel.requestFullscreen().then(() => {
+//       mainImage.style.width = "900px";
+//       mainImage.style.height = "700px";
+//       carousel.style.height="auto";
+//     });
+//     fullscreenButton.innerHTML = `<i class="fa-solid fa-expand">`;
+//   } else {
+//     document.exitFullscreen();
+//     mainImage.style.width = "";
+//     mainImage.style.height = "";
+//     carousel.style.height="";
+//     fullscreenButton.innerHTML = `<i class="fa-solid fa-expand">`;
+//   }
+//   isFullscreen = !isFullscreen;
+// });
 
 scrollLeftButton.addEventListener('click', () => {
   thumbTrack.scrollBy({ left: -100, behavior: 'smooth' });
