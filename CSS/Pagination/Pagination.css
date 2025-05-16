@@ -46,8 +46,12 @@
   font-size: 15px;
   font-weight: bold;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-pagination .pagination .active {
+  display: flex;
+  justify-content: center;
   background: #154384;
   color: white;
   box-shadow: 0 0 12px rgba(38, 76, 106, 0.3);
