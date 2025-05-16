@@ -5,12 +5,16 @@
 .news-carousel {
   width: 100%;
   background: #EEEEEE;
-  @include flex-center(flex, center, center, null);
+    display: flex;
+     justify-content: center; 
+    align-items: center;
   height: auto;
   padding: $padding-custom 0;
 
   .carousel-container {
-    @include flex-center(flex, center, center, null);
+    display: flex;
+     justify-content: center; 
+    align-items: center;
     position: relative;
     flex-direction: column;
     width: 1180px;
@@ -21,7 +25,9 @@
 padding: 20px;
     .carousel {
       overflow: hidden;
-      @include flex-center(flex, center, center, null);
+    display: flex;
+     justify-content: center; 
+    align-items: center;
       width: 90%;
       height: 450px;
 
@@ -92,7 +98,8 @@ padding: 20px;
     .carousel-thumbnails {
       position: relative;
       max-width: 100%;
-      @include flex-center(flex, center, null, null);
+    display: flex;
+     justify-content: center; 
 
       .scroll-left,
       .scroll-right {
@@ -116,13 +123,16 @@ padding: 20px;
     }
 
     .thumbnails-wrapper {
-      @include flex-center(flex, center, null, null);
+    display: flex;
+     justify-content: center; 
       width: 100%;
       transition: transform 0.3s ease-in-out;
 
       .thumb-track {
         width: 90%;
-        @include flex-center(flex, center, null, 10px);
+            display: flex;
+     justify-content: center; 
+gap: 10px;
         overflow: hidden;
 
         .thumb {
