@@ -1,3 +1,4 @@
+
 // Font Sizes
 $font-size-xsmall:10px;
 $font-size-small:12px;
@@ -11,6 +12,7 @@ $font-size-custom:20px;
 $section-padding:60px 0;
 $responsive-padding:60px 20px;
 $padding-xxsmall:5px;
+$padding-xxsmall:5px;
 $padding-xsmall:10px;
 $padding-small:12px;
 $padding-medium: 15px;
@@ -23,6 +25,7 @@ $mobile-padding:60px 20px;
 
 
 //BORDER-RADIUS
+$border-radius-xxsmall:5px;
 $border-radius-xxsmall:5px;
 $border-radius-xsmall:10px;
 $border-radius-small:12px;
@@ -56,8 +59,10 @@ $color-background: #154384;
 $color-text: #2c3e50;
 $color-hover:#155783;
 $color-black:black;
+$color-black:black;
 $color-orange:#f1aa61;
 $color-second-background:#eeeeee;
+
 
 
 
@@ -70,6 +75,8 @@ $spacing-xlarge: 32px;
 
 
 // Media Queries
+
+$breakpoint-xsmall: 460px;
 
 $breakpoint-xsmall: 460px;
 $breakpoint-small: 576px;

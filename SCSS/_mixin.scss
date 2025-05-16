@@ -7,9 +7,9 @@
 }
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin text-turnicate($line-clamp) {
@@ -20,9 +20,9 @@
 }
 
 @mixin box-shadow($x, $y, $blur, $color) {
-  -webkit-box-shadow: $x $y $blur $color;
-  -moz-box-shadow: $x $y $blur $color;
-  box-shadow: $x $y $blur $color;
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
 }
 
 @mixin flex-center($display: flex, $justify-content: null, $align-items: null, $gap:null) {
@@ -55,7 +55,7 @@
 }
 
 @mixin dropdown_position($top: null, $left: null, $right: null, $bottom: null) {
-  position: absolute;
+    position: absolute;
 
     @if $top != null {
         top: $top;
